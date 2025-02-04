@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crash Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .crash__graph {
+        width: 100%;
+        height: 400px;
+      }
+      .crash__timer {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .lose {
+        background-color: #ff333f1a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="crash__graph">
+      <canvas id="crashChart"></canvas>
+    </div>
+    <div class="crash__timer">Time: <span id="crashTimer">15</span></div>
+    <div>Multiplier: <span id="multiplierDisplay"></span></div>
+    <input type="text" id="crashBet" placeholder="Enter bet" />
+    <input type="text" id="crashX" placeholder="Enter X" />
+    <script src="crash.js"></script>
+  </body>
+</html>
