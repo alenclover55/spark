@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "stolzlBold";
+  src: url("./stolzl_bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "stolzlBook";
+  src: url("./stolzl_book.otf") format("truetype");
+}
+@font-face {
+  font-family: "stolzlLight";
+  src: url("./stolzl_light.otf") format("truetype");
+}
+@font-face {
+  font-family: "stolzlMedium";
+  src: url("./stolzl_medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "stolzlRegular";
+  src: url("./stolzl_regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "stolzlThin";
+  src: url("./stolzl_thin.otf") format("truetype");
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./proximanova_extrabold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("./gilroy-medium.eot");
+  src: url("./gilroy-medium.eot?#iefix") format("embedded-opentype"),
+    url("./gilroy-medium.woff2") format("woff2"),
+    url("./gilroy-medium.woff") format("woff"),
+    url("./gilroy-medium.ttf") format("truetype"),
+    url("./gilroy-medium.svg#gilroy-medium") format("svg");
+}

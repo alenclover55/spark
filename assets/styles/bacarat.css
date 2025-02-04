@@ -1,0 +1,169 @@
+.bacarat {
+}
+
+.bacarat-game {
+  position: relative;
+  overflow: hidden;
+  padding: 79px 139px 0 137px;
+  background: #121212;
+  width: 100%;
+
+  .game-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .game-side {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    &:nth-child(2) {
+      gap: 80px;
+    }
+  }
+  .game-title {
+    position: relative;
+    max-width: 558px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
+    h2 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-family: stolzlMedium, sans-serif;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      padding: 23px 0;
+    }
+  }
+  .game-bet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 66px;
+    margin-bottom: 70px;
+    gap: 25px;
+    .bet-variant {
+      border: 2px solid #434343;
+      border-radius: 5px;
+      background: #191919;
+      width: 230px;
+      height: 158px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #434343;
+      }
+      h3 {
+        color: #7c7c7c;
+        font-family: stolzlMedium, sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      p {
+        color: #7c7c7c;
+        font-family: stolzlRegular, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+.game-card {
+  width: 137px;
+  height: 184px;
+  border-radius: 5px;
+  background: #ffffff;
+  padding-left: 11px;
+  box-shadow: 0 0 15px 0 #00000059;
+  h3 {
+    color: #000000;
+    font-family: ProximaNova, sans-serif;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 15%;
+    text-align: left;
+  }
+  &.active {
+    border: 3px solid #1fff20;
+    background: #ffffff;
+  }
+
+  &.active {
+    box-shadow: 0 0 15px 0 #00000059;
+  }
+
+  &.rounded {
+    img,
+    h3 {
+      display: none;
+    }
+    background: url("../images/spark-game-card.svg") no-repeat;
+    background-size: contain;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1680px) {
+  .bacarat-game {
+    padding: 110px 60px 0 60px;
+  }
+}
+@media (max-width: 720px) {
+  .bacarat-game {
+    padding: 70px 10px 0 10px;
+  }
+  .game-field {
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  .game-side {
+    flex-direction: column;
+    gap: 25px !important;
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+  }
+  .bacarat-game {
+    .game-title {
+      h2 {
+        font-size: 12px;
+        padding: 10px 0;
+      }
+    }
+    .game-bet {
+      gap: 5px;
+    }
+  }
+  .bacarat-game {
+    & .game-bet {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      & .bet-variant {
+        height: 90px;
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

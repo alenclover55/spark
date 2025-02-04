@@ -1,0 +1,31 @@
+<svg width="329.755127" height="338.363770" viewBox="0 0 329.755 338.364" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_386_5329_dd" x="0.000000" y="0.000000" width="329.755127" height="338.363770" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="5"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.051 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<radialGradient gradientTransform="translate(164.877 169.182) rotate(90) scale(276.701 268.977)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_386_5329_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.407934" stop-color="#323232"/>
+			<stop offset="1.000000" stop-color="#676767"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(164.877 169.182) rotate(90) scale(253.643 246.562)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_386_5330_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.407934" stop-color="#323232"/>
+			<stop offset="1.000000" stop-color="#181818"/>
+		</radialGradient>
+	</defs>
+	<g filter="url(#filter_386_5329_dd)">
+		<ellipse id="Ellipse 148" cx="164.877441" cy="169.181885" rx="149.877548" ry="154.181824" fill="url(#paint_radial_386_5329_0)" fill-opacity="1.000000"/>
+	</g>
+	<ellipse id="Ellipse 151" cx="164.877441" cy="169.181641" rx="137.387756" ry="141.333328" fill="url(#paint_radial_386_5330_0)" fill-opacity="1.000000"/>
+	<ellipse id="Ellipse 151" cx="164.877441" cy="169.181641" rx="137.887756" ry="141.833328" stroke="#545454" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<path id="K" d="M117.96 121.5L117.96 217.5L141.89 217.5L170.22 182.55L190.92 217.5L221 217.5L187.05 161.8L219.72 121.5L191.68 121.5L144.32 181.89L144.32 121.5L117.96 121.5Z" fill="#FFFFFF" fill-opacity="0.150000" fill-rule="evenodd"/>
+</svg>

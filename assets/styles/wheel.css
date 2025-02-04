@@ -1,0 +1,110 @@
+.wheel-game {
+  background: #121212;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .wheel {
+    margin-top: 37px;
+    margin-bottom: 42px;
+    position: relative;
+    width: 542px;
+    .wheel-arrow {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .wheel-mult {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #00e403;
+      font-family: stolzlMedium, sans-serif;
+      font-size: 40px;
+      line-height: 48px;
+      span {
+        font-family: stolzlMedium, sans-serif;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+  .multi-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 0 85px 0 79px;
+    .multi-item {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #212121;
+      p {
+        padding-top: 18px;
+        padding-bottom: 8px;
+        text-align: center;
+        color: #fff;
+        font-family: stolzlRegular, sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      span {
+        font-size: 16px;
+      }
+      div {
+        width: 100%;
+        height: 10px;
+      }
+    }
+    &.wide {
+      padding: 0 64px 0 65px;
+      gap: 7px;
+      p {
+        font-size: 16px;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+    &.centered {
+      padding: 0 229px 0 229px;
+      gap: 15px;
+      p {
+        font-size: 24px;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .wheel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+  }
+  .wheel-inner {
+    width: 300px;
+  }
+  .wheel-arrow {
+    width: 25px !important;
+    top: -30px !important;
+  }
+  .wheel-game {
+    .multi-wrapper {
+      padding: 0 !important;
+      flex-wrap: wrap;
+      .multi-item {
+        min-width: 125px !important;
+      }
+    }
+  }
+}

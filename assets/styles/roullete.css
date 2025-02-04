@@ -1,0 +1,204 @@
+.roullete-game {
+  width: 100%;
+  background: #121212;
+  padding-top: 33px;
+  padding-bottom: 20px;
+  .roulete-fields {
+    display: grid;
+    grid-template-columns: repeat(13, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 3px;
+    .game-cell {
+      border-radius: 5px;
+      background: #475163;
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.red {
+        background: #fe3955;
+      }
+      &.spand3 {
+        grid-row: span 3;
+        background: #62ca5b;
+      }
+    }
+  }
+}
+.roulete-fields-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.roulete-fields-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  span {
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.roullete-footer {
+  display: grid;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 10px;
+  grid-template-columns: repeat(12, 50px);
+  .roullete-footer-item {
+    border: 2px solid #434343;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:nth-child(1) {
+      grid-column: span 4;
+    }
+    &:nth-child(2) {
+      grid-column: span 4;
+    }
+    &:nth-child(3) {
+      grid-column: span 4;
+    }
+    &:nth-child(4) {
+      grid-column: span 2;
+    }
+    &:nth-child(5) {
+      grid-column: span 2;
+    }
+    &:nth-child(6) {
+      grid-column: span 2;
+      border: none;
+      background: #fe3955;
+    }
+    &:nth-child(7) {
+      grid-column: span 2;
+      border: none;
+      background: #475163;
+    }
+    &:nth-child(8) {
+      grid-column: span 2;
+    }
+    &:nth-child(9) {
+      grid-column: span 2;
+    }
+  }
+}
+.result-block {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  border-radius: 5px;
+  background: #212121;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 135px;
+}
+.roullete {
+  display: flex;
+  align-items: center;
+  gap: 128px;
+}
+
+@media (max-width: 1180px) {
+  .roullete {
+    display: none;
+  }
+  .mobile-roullete-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    justify-content: center;
+  }
+  .roulete-fields-wrapper {
+    flex-direction: column;
+  }
+  .roulete-fields-right {
+    flex-direction: row;
+  }
+  .roullete-footer {
+    grid-template-columns: repeat(2, 50px);
+    grid-template-rows: repeat(12, 50px);
+
+    .roullete-footer-item {
+      text-orientation: mixed;
+      writing-mode: vertical-rl;
+      height: auto;
+      &:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 4;
+      }
+      &:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 4;
+      }
+      &:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 4;
+      }
+      &:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(6) {
+        grid-column: span 1;
+        grid-row: span 2;
+        border: none;
+        background: #fe3955;
+      }
+      &:nth-child(7) {
+        grid-column: span 1;
+        grid-row: span 2;
+        border: none;
+        background: #475163;
+      }
+      &:nth-child(8) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(9) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+    }
+  }
+  .roullete-game {
+    .roulete-fields {
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(13, 50px);
+      .game-cell {
+        &.spand3 {
+          grid-row: span 1;
+          grid-column: span 3;
+          background: #62ca5b;
+        }
+      }
+    }
+  }
+}

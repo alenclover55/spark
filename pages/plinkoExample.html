@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plinko Game</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      canvas {
+        background-color: #fff;
+        border: 2px solid #000;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .score {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      id="plinkoCanvas"
+      width="800"
+      height="600"
+      style="background-color: #121212"
+    ></canvas>
+    <button id="startButton">Запустить шарик</button>
+    <div class="score">Очки: <span id="scoreValue">0</span></div>
+
+    <script>
+      const canvas = document.getElementById("plinkoCanvas");
+      const ctx = canvas.getContext("2d");
+      const startButton = document.getElementById("startButton");
+      const scoreValue = document.getElementById("scoreValue");
+
+      // Настройки игры
+      const PIN_ROWS = 10; // Количество рядов пинов
+      const PIN_SPACING = 40; // Расстояние между пинами
+      const BALL_RADIUS = 10; // Радиус шарика
+      const GRAVITY = 0.5; // Гравитация
+      const FRICTION = 0.8; // Трение при столкновении
+      const HOLE_WIDTH = 70; // Ширина лунки
+      const HOLE_HEIGHT = 20; // Высота лунки
+      const HOLE_Y = canvas.height - 30; // Позиция лунок по Y
+
+      // Лунки и их значения
+      const holes = [];
+      const holeValues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; // Значения для 10 лунок
+      for (let i = 0; i < 9; i++) {
+        const x = i * HOLE_WIDTH + 20; // Равномерное распределение лунок
+        holes.push({ x, y: HOLE_Y, value: holeValues[i] });
+      }
+
+      // Создание пинов
+      const pins = [];
+      for (let row = 0; row < PIN_ROWS; row++) {
+        for (let col = 0; col <= row; col++) {
+          const x =
+            canvas.width / 2 - (row * PIN_SPACING) / 2 + col * PIN_SPACING;
+          const y = 100 + row * PIN_SPACING;
+          pins.push({ x, y });
+        }
+      }
+
+      // Шарик
+      let ball = {
+        x: canvas.width / 2,
+        y: 100,
+        velocityX: 0,
+        velocityY: 0,
+        isFalling: false, // Флаг, указывающий, падает ли шарик
+      };
+
+      // Очки
+      let score = 0;
+
+      // Отрисовка пинов
+      function drawPins() {
+        ctx.fillStyle = "#FFFFFF";
+        pins.forEach((pin) => {
+          ctx.beginPath();
+          ctx.arc(pin.x, pin.y, 5, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      }
+
+      // Отрисовка шарика
+      function drawBall() {
+        ctx.fillStyle = "#DB9A38";
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, BALL_RADIUS, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // // Отрисовка лунок
+      // function drawHoles() {
+      //   ctx.fillStyle = "#00f"; // Синий цвет для лунок
+      //   holes.forEach((hole) => {
+      //     ctx.fillRect(hole.x, hole.y, HOLE_WIDTH, HOLE_HEIGHT); // Отрисовка прямоугольника
+      //     ctx.fillStyle = "#fff"; // Белый цвет для текста
+      //     ctx.font = "14px Arial";
+      //     ctx.textAlign = "center";
+      //     ctx.fillText(
+      //       hole.value,
+      //       hole.x + HOLE_WIDTH / 2,
+      //       hole.y + HOLE_HEIGHT / 2 + 5
+      //     ); // Текст с ценностью
+      //   });
+      // }
+
+      // Обновление позиции шарика
+      function updateBall() {
+        if (ball.isFalling) {
+          ball.velocityY += GRAVITY;
+          ball.x += ball.velocityX;
+          ball.y += ball.velocityY;
+
+          // Проверка столкновений с пинами
+          pins.forEach((pin) => {
+            const dx = ball.x - pin.x;
+            const dy = ball.y - pin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < BALL_RADIUS + 5) {
+              // Отскок шарика
+              ball.velocityX = (Math.random() - 0.5) * 4;
+              ball.velocityY = -ball.velocityY * FRICTION;
+            }
+          });
+
+          // Проверка попадания в лунку
+          holes.forEach((hole) => {
+            if (
+              ball.x + BALL_RADIUS > hole.x &&
+              ball.x - BALL_RADIUS < hole.x + HOLE_WIDTH &&
+              ball.y + BALL_RADIUS > hole.y &&
+              ball.y - BALL_RADIUS < hole.y + HOLE_HEIGHT
+            ) {
+              // Шарик попал в лунку
+              ball.isFalling = false;
+              score += hole.value; // Добавляем очки
+              scoreValue.textContent = score; // Обновляем отображение очков
+              resetBall(); // Сбрасываем шарик
+            }
+          });
+
+          // Проверка выхода за пределы экрана
+          if (ball.y + BALL_RADIUS > canvas.height) {
+            resetBall();
+          }
+        }
+      }
+
+      // Сброс шарика в начальное положение
+      function resetBall() {
+        ball.x = canvas.width / 2;
+        ball.y = 100;
+        ball.velocityX = 0;
+        ball.velocityY = 0;
+        ball.isFalling = false; // Останавливаем падение шарика
+      }
+
+      // Запуск шарика
+      function startBall() {
+        if (!ball.isFalling) {
+          ball.isFalling = true;
+          ball.velocityX = (Math.random() - 0.5) * 4; // Случайное начальное движение по X
+          ball.velocityY = 0; // Начальная скорость по Y
+        }
+      }
+
+      // Основной цикл игры
+      function gameLoop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawPins(); // Отрисовка пинов
+        // drawHoles(); // Отрисовка лунок
+        drawBall(); // Отрисовка шарика
+        updateBall(); // Обновление позиции шарика
+
+        requestAnimationFrame(gameLoop);
+      }
+
+      // Обработчик нажатия на кнопку
+      startButton.addEventListener("click", startBall);
+
+      // Запуск игры
+      gameLoop();
+    </script>
+  </body>
+</html>

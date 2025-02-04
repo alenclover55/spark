@@ -1,0 +1,40 @@
+<svg width="479.000000" height="315.822754" viewBox="0 0 479 315.823" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_58_452_dd" x="181.000000" y="-167.086914" width="704.000000" height="704.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="41.6667" result="effect_layerBlur_1"/>
+		</filter>
+		<linearGradient x1="245.997345" y1="-58.660103" x2="239.999847" y2="429.127045" id="paint_linear_58_441_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#B4080B"/>
+			<stop offset="0.626805" stop-color="#670507" stop-opacity="0.000000"/>
+		</linearGradient>
+		<linearGradient x1="245.997345" y1="-58.660103" x2="239.999847" y2="429.127045" id="paint_linear_58_443_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#B4080B"/>
+			<stop offset="0.626805" stop-color="#670507" stop-opacity="0.000000"/>
+		</linearGradient>
+	</defs>
+	<rect id="Rectangle 24" x="2.000000" y="2.000000" rx="5.000000" width="475.000000" height="311.822754" fill="#0E0E0E" fill-opacity="1.000000"/>
+	<rect id="Rectangle 24" x="1.000000" y="1.000000" rx="5.000000" width="477.000000" height="313.822754" stroke="url(#paint_linear_58_441_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<mask id="mask58_443" mask-type="alpha" maskUnits="userSpaceOnUse" x="2.000000" y="2.000000" width="475.000000" height="311.822754">
+		<rect id="Rectangle 32" x="2.000000" y="2.000000" rx="5.000000" width="475.000000" height="311.822754" fill="#0E0E0E" fill-opacity="1.000000"/>
+		<rect id="Rectangle 32" x="3.000000" y="3.000000" rx="5.000000" width="473.000000" height="309.822754" stroke="url(#paint_linear_58_443_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	</mask>
+	<g mask="url(#mask58_443)">
+		<rect id="Rectangle 61" x="125.000000" y="-88.294922" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 125.000000 -88.294922)" fill="#141414" fill-opacity="1.000000"/>
+		<rect id="Rectangle 62" x="134.171875" y="59.429688" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 134.171875 59.429688)" fill="#141414" fill-opacity="1.000000"/>
+		<rect id="Rectangle 63" x="143.493652" y="209.454102" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 143.493652 209.454102)" fill="#141414" fill-opacity="1.000000"/>
+	</g>
+	<g mask="url(#mask58_443)">
+		<rect id="Rectangle 61" y="-49.295898" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 0.000000 -49.295898)" fill="#141414" fill-opacity="1.000000"/>
+		<rect id="Rectangle 62" x="9.171875" y="99.428711" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 9.171875 99.428711)" fill="#141414" fill-opacity="1.000000"/>
+		<rect id="Rectangle 63" x="18.493652" y="248.454102" rx="5.000000" width="106.221703" height="138.655807" transform="rotate(-3.126 18.493652 248.454102)" fill="#141414" fill-opacity="1.000000"/>
+		<g filter="url(#filter_58_452_dd)">
+			<circle id="Ellipse 25" cx="533.000000" cy="184.913086" r="227.000000" fill="#9E0709" fill-opacity="0.250000"/>
+		</g>
+	</g>
+	<rect id="el:fire" width="24.000000" height="24.000000" transform="translate(17.000000 276.913086)" fill="#FFFFFF" fill-opacity="0"/>
+</svg>

@@ -1,0 +1,36 @@
+.stairs-game {
+  width: 100%;
+  border-radius: 0px 5px 5px 0px;
+  background: #121212;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-columns: repeat(13, 1fr);
+  padding: 20px;
+  justify-content: center;
+  gap: 25px 2.75px;
+  .stair {
+    border-radius: 5px;
+    background: #191919;
+    height: 26px;
+  }
+}
+@media (max-width: 720px) {
+  .stairs-game {
+    width: 100%;
+    border-radius: 0px 5px 5px 0px;
+    background: #121212;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    padding: 20px;
+    justify-content: center;
+    gap: 10px 5px;
+    .stair {
+      border-radius: 5px;
+      background: #191919;
+      height: 26px;
+    }
+  }
+}

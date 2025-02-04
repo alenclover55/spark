@@ -1,0 +1,23 @@
+<svg width="38.000000" height="40.000000" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip86_16499">
+			<rect id="фрейм 2" width="38.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="фрейм 2" width="38.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip86_16499)">
+		<circle id="Ellipse 114" cx="18.954468" cy="20.954468" r="19.000000" fill="#CAA300" fill-opacity="1.000000"/>
+		<circle id="Ellipse 121" cx="18.954468" cy="18.954468" r="19.000000" fill="#FFCE00" fill-opacity="1.000000"/>
+		<path id="Ellipse 114" d="M37.3 14.03C38.38 18.07 38.08 22.16 36.68 25.78L31.36 23.73C32.41 21 32.5 18.14 31.8 15.51L37.3 14.03Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 115" d="M28.45 2.5C32.07 4.59 34.74 7.69 36.32 11.25L31.11 13.56C29.92 10.88 27.96 8.79 25.6 7.43L28.45 2.5Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 116" d="M14.03 0.6C18.07 -0.49 22.16 -0.18 25.78 1.22L23.73 6.54C21 5.49 18.14 5.4 15.51 6.1L14.03 0.6Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 117" d="M2.5 9.45C4.59 5.83 7.69 3.16 11.25 1.58L13.56 6.79C10.88 7.98 8.79 9.94 7.43 12.3L2.5 9.45Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 118" d="M0.6 23.87C-0.49 19.83 -0.18 15.74 1.22 12.12L6.54 14.17C5.49 16.9 5.4 19.76 6.1 22.39L0.6 23.87Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 119" d="M9.45 35.4C5.83 33.31 3.16 30.21 1.58 26.65L6.79 24.34C7.98 27.02 9.94 29.11 12.3 30.47L9.45 35.4Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 120" d="M23.87 37.3C19.83 38.38 15.74 38.08 12.12 36.68L14.17 31.36C16.9 32.41 19.76 32.5 22.39 31.8L23.87 37.3Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Ellipse 121" d="M35.4 28.45C33.31 32.07 30.21 34.74 26.65 36.32L24.34 31.11C27.02 29.92 29.11 27.96 30.47 25.6L35.4 28.45Z" fill="#FFE579" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
