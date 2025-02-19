@@ -40,6 +40,7 @@ input[type="number"] {
 }
 .logo {
   display: block;
+  height: 35px;
 }
 .logo-mobile {
   display: none;
@@ -761,15 +762,18 @@ input[type="number"] {
     }
     div {
       color: #ffffff;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
       display: flex;
       align-items: center;
       gap: 10px;
+      img {
+        width: 14px;
+      }
     }
     p {
       color: #ffffff;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
       display: flex;
       align-items: center;
@@ -787,7 +791,8 @@ input[type="number"] {
 .header {
   background: #191919;
   box-shadow: 0 4px 15px 5px #00000040;
-  padding: 20px 0;
+  height: 60px;
+  padding: 8px 0;
 }
 .game-select-wrapper {
   position: relative;
@@ -874,13 +879,13 @@ input[type="number"] {
   margin: 0 auto;
 }
 .currency-wallet button {
-  width: 110px;
-  height: 60px;
+  width: 90px;
+  height: 47px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 400;
   line-height: 19px;
   background: #cd090e;
@@ -895,7 +900,7 @@ input[type="number"] {
   text-align: right;
   background: transparent;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 12px;
   line-height: 19px;
   margin-right: 5px;
 }
@@ -904,6 +909,9 @@ input[type="number"] {
   display: flex;
   align-items: center;
   padding: 0 24px;
+  .currency-icon {
+    width: 14px;
+  }
   img {
     margin-left: 4px;
     cursor: pointer;
@@ -1099,6 +1107,7 @@ input[type="number"] {
   color: #434343;
   font-size: 0.875rem;
   line-height: 17px;
+  text-wrap: nowrap;
 }
 
 .plinko-game {
@@ -1478,6 +1487,9 @@ input[type="number"] {
 }
 .profile-menu-btn {
   cursor: pointer;
+  svg {
+    height: 40px;
+  }
 }
 .profile-menu {
   position: relative;
@@ -1498,24 +1510,28 @@ input[type="number"] {
     right: 10px;
   }
   .profile-menu-item {
+    svg {
+      width: 14px;
+    }
     padding: 0 13px;
     color: #ffffff;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 10px;
+    height: 46px;
     &:hover {
       background: #2c2c2c;
     }
-    gap: 10px;
-    height: 46px;
   }
 }
 .latest-games-table {
   .table-header {
     margin-top: 32px;
+    margin-bottom: 15px;
   }
   .table-header,
   .table-row {
@@ -1662,7 +1678,7 @@ input[type="number"] {
   }
 }
 .sidebar {
-  width: 95px;
+  width: 60px;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -1673,7 +1689,7 @@ input[type="number"] {
   .menu-group {
     background: #141414;
     border-radius: 5px;
-    margin: 20px 14px;
+    margin: 10px;
   }
   a {
     color: #ffffff;
@@ -1685,9 +1701,10 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 67px;
+    height: 44px;
     transition: all 0.3s ease-in-out;
     svg {
+      width: 14px;
       * {
         transition: all 0.3s ease-in-out;
       }
@@ -1697,6 +1714,9 @@ input[type="number"] {
       svg {
         * {
           fill: #fff;
+        }
+        path {
+          stroke: #fff;
         }
       }
     }
@@ -1721,10 +1741,14 @@ input[type="number"] {
     }
   }
   .menu-open-btn {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
     background: none;
     border: none;
-    padding: 30px 35px 20px 35px;
     cursor: pointer;
+    padding: 20px 0 10px 23px;
   }
 }
 .modal-layout {

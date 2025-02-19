@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     $(".currency-field input").val(value);
 
-    $(".currency-field svg").replaceWith(
+    $(".currency-field .currency-icon").replaceWith(
       `<img src="${imageSrc}" alt="${currency}" class="currency-icon" />`
     );
 
