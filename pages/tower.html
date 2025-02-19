@@ -22,15 +22,19 @@
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
-          <img class="logo" src="./assets/images/logo.svg" alt="logo" />
-          <img class="logo-mobile" src="./assets/images/logo-mobile.svg" alt="">
+          <img class="logo" src="../assets/images/logo.svg" alt="logo" />
+          <img
+            class="logo-mobile"
+            src="../assets/images/logo-mobile.svg"
+            alt=""
+          />
           <div class="currency-wallet-wrapper">
             <div class="currency-wallet">
               <div class="currency-field">
-                <input readonly type="text" value="0.00" />
+                <input readonly type="text" value="0.00000000 " />
                 <svg
-                  width="20.000000"
-                  height="20.689453"
+                  width="14"
+                  height="14"
                   viewBox="0 0 20 20.6895"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +84,10 @@
                   alt=""
                 />
               </div>
-              <button>Кошелёк</button>
+              <button>
+                <p>Кошелёк</p>
+                <img src="../assets/icons/wallet-white.svg" alt="" />
+              </button>
               <div class="currency-select-list">
                 <svg
                   class="currency-triangle"
@@ -149,7 +156,7 @@
                   <p><span>₽</span> 2.00</p>
                   <div>
                     <img
-                      data-image="./assets/icons/trx_icon.svg"
+                      data-image="../assets/icons/trx_icon.svg"
                       src="../assets/icons/trx_icon.svg"
                       alt=""
                     />
@@ -211,9 +218,8 @@
                   fill-rule="evenodd"
                 />
               </svg>
-
-              <a class="profile-menu-item" href=""
-                ><svg
+              <a id="wallet-btn" class="profile-menu-item">
+                <svg
                   width="20.000000"
                   height="16.000000"
                   viewBox="0 0 20 16"
@@ -229,10 +235,10 @@
                     fill-rule="nonzero"
                   />
                 </svg>
-                Кошелек</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Кошелек
+              </a>
+              <a class="profile-menu-item" href="./pages/vip.html">
+                <svg
                   width="25.000000"
                   height="24.000000"
                   viewBox="0 0 25 24"
@@ -279,10 +285,10 @@
                     />
                   </g>
                 </svg>
-                ВИП</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                ВИП
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="18.000000"
                   height="20.000000"
                   viewBox="0 0 18 20"
@@ -361,10 +367,10 @@
                     fill-opacity="1.000000"
                   />
                 </svg>
-                Партнерам</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Партнерам
+              </a>
+              <a class="profile-menu-item" href="./pages/transaction.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -440,10 +446,10 @@
                     </g>
                   </g>
                 </svg>
-                Транзакции</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Транзакции
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="20.003906"
                   height="20.000000"
                   viewBox="0 0 20.0039 20"
@@ -479,10 +485,10 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                Статистика</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Статистика
+              </a>
+              <a class="profile-menu-item" href="./pages/settings.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -522,10 +528,10 @@
                     />
                   </g>
                 </svg>
-                Настройки</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Настройки
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="21.000000"
                   height="20.000000"
                   viewBox="0 0 21 20"
@@ -565,10 +571,10 @@
                     />
                   </g>
                 </svg>
-                Поддержка</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Поддержка
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -608,8 +614,8 @@
                     />
                   </g>
                 </svg>
-                Выход</a
-              >
+                Выход
+              </a>
             </div>
           </div>
         </div>
@@ -987,109 +993,125 @@
                 </button>
               </div>
               <div class="hand-mode">
-                <div class="game-input">
-                  <label>Общая прибыль (1.00x) <span>0.00000 TRX</span></label>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="game-select-wrapper">
-                  <p>Риск</p>
-                  <div class="select-block">
-                    <div class="select-header">
-                      <input value="Низкий" readonly type="text" />
-                      <svg
-                        width="17.414062"
-                        height="10.121277"
-                        viewBox="0 0 17.4141 10.1213"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                      >
-                        <path
-                          id="Vector 32"
-                          d="M0.7 0.7L8.7 8.7L16.7 0.7"
-                          stroke="#323232"
-                          stroke-opacity="1.000000"
-                          stroke-width="2.000000"
-                        />
-                      </svg>
+                <div class="mode-wrapper">
+                  <div class="game-input">
+                    <label>Сумма ставки <span>0.00000 TRX</span></label>
+                    <div>
+                      <input type="text" />
+                      <button class="lined">1/2</button>
+                      <button>x2</button>
                     </div>
-                    <ul class="select-body">
-                      <li>Низкий</li>
-                      <li>Средний</li>
-                      <li>Высокий</li>
-                      <li>Эксперт</li>
-                      <li>Мастер</li>
-                    </ul>
                   </div>
-                </div>
-                <div class="risk">
-                  <p>Риск</p>
-                  <div class="risk-wrapper">
-                    <button class="risk-btn active">Низкий</button>
-                    <button class="risk-btn">Средний</button>
-                    <button class="risk-btn">Высокий</button>
-                    <button class="risk-btn">Эксперт</button>
-                    <button class="risk-btn">Мастер</button>
+                  <div class="game-select-wrapper">
+                    <p>Риск</p>
+                    <div class="select-block">
+                      <div class="select-header">
+                        <input value="Низкий" readonly type="text" />
+                        <svg
+                          width="17.414062"
+                          height="10.121277"
+                          viewBox="0 0 17.4141 10.1213"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <path
+                            id="Vector 32"
+                            d="M0.7 0.7L8.7 8.7L16.7 0.7"
+                            stroke="#323232"
+                            stroke-opacity="1.000000"
+                            stroke-width="2.000000"
+                          />
+                        </svg>
+                      </div>
+                      <ul class="select-body">
+                        <li>Низкий</li>
+                        <li>Средний</li>
+                        <li>Высокий</li>
+                        <li>Эксперт</li>
+                        <li>Мастер</li>
+                      </ul>
+                    </div>
                   </div>
+                  <button class="game-confirm">Ставка</button>
                 </div>
-                <button class="game-confirm">Ставка</button>
               </div>
               <div class="auto-mode">
-                <div class="game-input">
-                  <label>Сумма ставки <span>0.00000 TRX</span></label>
-                  <div>
-                    <input type="text" />
-                    <button>1/2</button>
-                    <button>x2</button>
-                  </div>
-                </div>
-                <div class="bombs-counts">
-                  <p>Количество бомб</p>
-                  <div class="bombs-counts-wrapper">
-                    <button class="bombs-counts-btn active">1</button>
-                    <button class="bombs-counts-btn">2</button>
-                    <button class="bombs-counts-btn">3</button>
-                    <button class="bombs-counts-btn">4</button>
-                    <button class="bombs-counts-btn">5</button>
-                    <button class="bombs-counts-btn">6</button>
-                    <button class="bombs-counts-btn">7</button>
-                  </div>
-                </div>
-                <div class="game-input">
-                  <label>Количество ставок</label>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="input-upstage-block">
-                  <label>При выигрыше </label>
-                  <div class="input-upstage-wrapper">
-                    <button>Сброс</button>
-                    <div class="sub-label">Увеличить на:</div>
-                    <div class="input-upstage">
+                <div class="mode-wrapper">
+                  <div class="game-input">
+                    <label>Сумма ставки <span>0.00000 TRX</span></label>
+                    <div>
                       <input type="text" />
-                      <span>%</span>
+                      <button class="lined">1/2</button>
+                      <button>x2</button>
                     </div>
                   </div>
-                </div>
-                <div class="input-upstage-block">
-                  <label>При проигрыше</label>
-                  <div class="input-upstage-wrapper">
-                    <button>Сброс</button>
-                    <div class="sub-label">Увеличить на:</div>
-                    <div class="input-upstage">
-                      <input type="text" />
-                      <span>%</span>
+                  <div class="game-select-wrapper">
+                    <p>Риск</p>
+                    <div class="select-block">
+                      <div class="select-header">
+                        <input value="Низкий" readonly type="text" />
+                        <svg
+                          width="17.414062"
+                          height="10.121277"
+                          viewBox="0 0 17.4141 10.1213"
+                          р
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <path
+                            id="Vector 32"
+                            d="M0.7 0.7L8.7 8.7L16.7 0.7"
+                            stroke="#323232"
+                            stroke-opacity="1.000000"
+                            stroke-width="2.000000"
+                          />
+                        </svg>
+                      </div>
+                      <ul class="select-body">
+                        <li>Низкий</li>
+                        <li>Средний</li>
+                        <li>Высокий</li>
+                        <li>Эксперт</li>
+                        <li>Мастер</li>
+                      </ul>
                     </div>
                   </div>
+                  <div class="game-input">
+                    <label>Количество ставок</label>
+                    <div>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="input-upstage-block">
+                    <label>При выигрыше </label>
+                    <div class="input-upstage-wrapper">
+                      <button>Сброс</button>
+                      <div class="sub-label">Увеличить на:</div>
+                      <div class="input-upstage">
+                        <input type="text" />
+                        <span>%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-upstage-block">
+                    <label>При проигрыше</label>
+                    <div class="input-upstage-wrapper">
+                      <button>Сброс</button>
+                      <div class="sub-label">Увеличить на:</div>
+                      <div class="input-upstage">
+                        <input type="text" />
+                        <span>%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="game-confirm">Начать автоставки</button>
                 </div>
-                <button class="game-confirm">Начать автоставки</button>
               </div>
             </div>
             <div class="tower-game">
-              <div class="tower-game-result">
+              <div class="tower-game-result active">
                 <h3>2,21 <span>x</span></h3>
                 <p>$0.00<img src="../assets/icons/trx_icon.svg" alt="" /></p>
               </div>
@@ -1098,15 +1120,6 @@
                   <div>
                     <img src="../assets/images/green-diamond.svg" alt="" />
                   </div>
-                </div>
-                <div class="tower-cell">
-                  <div></div>
-                </div>
-                <div class="tower-cell">
-                  <div></div>
-                </div>
-                <div class="tower-cell">
-                  <div></div>
                 </div>
                 <div class="tower-cell">
                   <div></div>
@@ -1226,7 +1239,7 @@
           </div>
           <div class="footer-menu">
             <div class="footer-menu-wrapper">
-              <div>
+              <div class="">
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
                   <a href="">Слоты</a>
@@ -1244,6 +1257,7 @@
                   <a href="">Dice</a>
                 </div>
               </div>
+
               <div>
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
@@ -1254,11 +1268,154 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="footer-menu-wrapper mobile">
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-selects-wrapper">
               <div class="language-select">
                 <div class="language-select-header">
                   <input value="Русский" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="language-select-wrapper">
                   <li class="language-select-item">Русский</li>
@@ -1269,7 +1426,33 @@
               <div class="currency-select">
                 <div class="currency-select-header">
                   <input value="RUB" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="currency-select-wrapper">
                   <li class="currency-select-item">USD</li>

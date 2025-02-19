@@ -1,5 +1,6 @@
 .limbo-game {
   width: 100%;
+  max-width: 900px;
   background: #121212;
   display: flex;
   padding: 25px 25px 25px 49px;
@@ -25,6 +26,7 @@
     border-radius: 5px;
     background: #1e1e1e;
     padding: 16px 18px 16px 18px;
+    align-items: end;
     div {
       position: relative;
       width: 100%;
@@ -53,12 +55,27 @@
       font-size: 20px;
       line-height: 24px;
       right: 10px;
-      top: 38px;
+      top: 12px;
     }
   }
 }
 
 @media (max-width: 720px) {
+  .limbo {
+    .game-settings-block {
+      .game-input {
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 3;
+        }
+      }
+      .game-confirm {
+        order: 2;
+      }
+    }
+  }
   .limbo-game {
     padding: 15px 15px 15px 15px;
     .game-mult {
@@ -69,7 +86,11 @@
       }
     }
     .game-inputs {
-      flex-wrap: wrap;
+      div {
+        p {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

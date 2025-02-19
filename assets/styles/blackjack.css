@@ -1,11 +1,18 @@
 .blackjack {
+  .game-settings-block {
+    .game-input {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
   .blackjack-variant {
     margin: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px 8px;
     .blackjack-variant-btn {
-      height: 65px;
+      height: 44px;
       background: #2c2c2c;
       border: none;
       border-radius: 5px;
@@ -17,6 +24,9 @@
       line-height: 17px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      img {
+        width: 14px;
+      }
       &:hover {
         background: #434343;
       }
@@ -55,7 +65,7 @@
       margin-bottom: 50px;
       .game-title {
         position: relative;
-        min-width: 558px;
+        min-width: 375px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -71,20 +81,20 @@
           z-index: 2;
           color: #fff;
           font-family: stolzlMedium, sans-serif;
-          font-size: 24px;
+          font-size: 15px;
           line-height: 29px;
           text-align: center;
-          padding: 23px 0;
+          padding: 14px 0;
         }
       }
       p {
         color: #323232;
         font-family: ProximaNova, sans-serif;
-        font-size: 24px;
+        font-size: 17px;
         font-weight: 600;
         line-height: 29px;
         text-align: center;
-        margin-top: 5px;
+        margin-top: 0px;
       }
     }
   }

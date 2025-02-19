@@ -110,6 +110,7 @@ $(".profile-menu-btn").click(() => {
 $(document).ready(function () {
   const $languageSelect = $(".language-select");
   const $languageSelectHeader = $(".language-select-header");
+  const $languageSelectArrow = $(".language-select-header").find("svg");
   const $languageSelectInput = $languageSelect.find("input");
   const $languageSelectWrapper = $languageSelect.find(
     ".language-select-wrapper"
@@ -119,6 +120,7 @@ $(document).ready(function () {
   $languageSelectHeader.on("click", function (e) {
     e.stopPropagation();
     $languageSelectWrapper.fadeToggle();
+    $languageSelectArrow.toggleClass("rotated-180");
   });
 
   $(document).on("click", function (e) {
@@ -137,6 +139,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   const $currencySelect = $(".currency-select");
   const $currencySelectHeader = $(".currency-select-header");
+  const $languageSelectArrow = $(".currency-select-header").find("svg");
   const $currencySelectInput = $currencySelect.find("input");
   const $currencySelectWrapper = $currencySelect.find(
     ".currency-select-wrapper"
@@ -146,6 +149,7 @@ $(document).ready(function () {
   $currencySelectHeader.on("click", function (e) {
     e.stopPropagation();
     $currencySelectWrapper.fadeToggle();
+    $languageSelectArrow.toggleClass("rotated-180");
   });
 
   $(document).on("click", function (e) {
@@ -301,4 +305,11 @@ $("#deposite-btn").click((e) => {
   $(".modal-layout").fadeOut();
   $(".popup").fadeOut();
   showPopup(".deposite-modal");
+});
+const dropDownHeaders = document.querySelectorAll(".drop-down-header");
+dropDownHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const dropDown = header.parentElement;
+    dropDown.classList.toggle("active");
+  });
 });

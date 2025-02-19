@@ -6,25 +6,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/fonts/fonts.css" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
-          <img class="logo" src="./assets/images/logo.svg" alt="logo" />
+          <img class="logo" src="../assets/images/logo.svg" alt="logo" />
           <img
             class="logo-mobile"
-            src="./assets/images/logo-mobile.svg"
+            src="../assets/images/logo-mobile.svg"
             alt=""
           />
           <div class="currency-wallet-wrapper">
             <div class="currency-wallet">
               <div class="currency-field">
-                <input readonly type="text" value="0.00" />
+                <input readonly type="text" value="0.00000000 " />
                 <svg
-                  width="20.000000"
-                  height="20.689453"
+                  width="14"
+                  height="14"
                   viewBox="0 0 20 20.6895"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,11 +69,14 @@
                 </svg>
                 <img
                   class="dropdown-icon"
-                  src="./assets/icons/arrow-dropdown.svg"
+                  src="../assets/icons/arrow-dropdown.svg"
                   alt=""
                 />
               </div>
-              <button>Кошелёк</button>
+              <button>
+                <p>Кошелёк</p>
+                <img src="../assets/icons/wallet-white.svg" alt="" />
+              </button>
               <div class="currency-select-list">
                 <svg
                   class="currency-triangle"
@@ -143,7 +145,7 @@
                   <p><span>₽</span> 2.00</p>
                   <div>
                     <img
-                      data-image="./assets/icons/trx_icon.svg"
+                      data-image="../assets/icons/trx_icon.svg"
                       src="../assets/icons/trx_icon.svg"
                       alt=""
                     />
@@ -205,9 +207,8 @@
                   fill-rule="evenodd"
                 />
               </svg>
-
-              <a class="profile-menu-item" href=""
-                ><svg
+              <a id="wallet-btn" class="profile-menu-item">
+                <svg
                   width="20.000000"
                   height="16.000000"
                   viewBox="0 0 20 16"
@@ -223,10 +224,10 @@
                     fill-rule="nonzero"
                   />
                 </svg>
-                Кошелек</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Кошелек
+              </a>
+              <a class="profile-menu-item" href="./pages/vip.html">
+                <svg
                   width="25.000000"
                   height="24.000000"
                   viewBox="0 0 25 24"
@@ -273,10 +274,10 @@
                     />
                   </g>
                 </svg>
-                ВИП</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                ВИП
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="18.000000"
                   height="20.000000"
                   viewBox="0 0 18 20"
@@ -355,10 +356,10 @@
                     fill-opacity="1.000000"
                   />
                 </svg>
-                Партнерам</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Партнерам
+              </a>
+              <a class="profile-menu-item" href="./pages/transaction.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -434,10 +435,10 @@
                     </g>
                   </g>
                 </svg>
-                Транзакции</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Транзакции
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="20.003906"
                   height="20.000000"
                   viewBox="0 0 20.0039 20"
@@ -473,10 +474,10 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                Статистика</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Статистика
+              </a>
+              <a class="profile-menu-item" href="./pages/settings.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -516,10 +517,10 @@
                     />
                   </g>
                 </svg>
-                Настройки</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Настройки
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="21.000000"
                   height="20.000000"
                   viewBox="0 0 21 20"
@@ -559,10 +560,10 @@
                     />
                   </g>
                 </svg>
-                Поддержка</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Поддержка
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -602,8 +603,8 @@
                     />
                   </g>
                 </svg>
-                Выход</a
-              >
+                Выход
+              </a>
             </div>
           </div>
         </div>
@@ -968,258 +969,46 @@
       </div>
     </div>
     <main>
-      <section class="nvuti">
+      <section class="coinflip">
         <div class="container">
           <div class="game-wrapper">
             <div class="game-settings-block">
-              <div class="game-mode-wrapper">
-                <button data-mode="hand" class="game-mode-btn active">
-                  Ручной режим
-                </button>
-                <button data-mode="auto" class="game-mode-btn">
-                  Авторежим
-                </button>
+              <div class="game-input">
+                <label>Сумма ставки <span>0.00000 TRX</span></label>
+                <div>
+                  <input type="text" />
+                  <button class="lined">1/2</button>
+                  <button>x2</button>
+                </div>
               </div>
-              <div class="hand-mode">
-                <div class="game-input">
-                  <label>Сумма ставки <span>0.00000 TRX</span></label>
-                  <div>
-                    <input type="text" />
-                    <button>1/2</button>
-                    <button>x2</button>
-                  </div>
+              <div class="game-input">
+                <label>Общая ставка<span>0.00000 TRX</span></label>
+                <div>
+                  <input type="text" />
                 </div>
-                <div class="game-select-wrapper">
-                  <p>Риск</p>
-                  <div class="select-block">
-                    <div class="select-header">
-                      <input value="1" readonly type="text" />
-                      <svg
-                        width="17.414062"
-                        height="10.121277"
-                        viewBox="0 0 17.4141 10.1213"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                      >
-                        <path
-                          id="Vector 32"
-                          d="M0.7 0.7L8.7 8.7L16.7 0.7"
-                          stroke="#323232"
-                          stroke-opacity="1.000000"
-                          stroke-width="2.000000"
-                        />
-                      </svg>
-                    </div>
-                    <ul class="select-body">
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="game-confirm" id="flipButton">Ставка</button>
               </div>
-              <div class="auto-mode">
-                <div class="game-input">
-                  <label>Сумма ставки <span>0.00000 TRX</span></label>
-                  <div>
-                    <input type="text" />
-                    <button>1/2</button>
-                    <button>x2</button>
-                  </div>
-                </div>
-                <div class="game-select-wrapper">
-                  <p>Риск</p>
-                  <div class="select-block">
-                    <div class="select-header">
-                      <input value="1" readonly type="text" />
-                      <svg
-                        width="17.414062"
-                        height="10.121277"
-                        viewBox="0 0 17.4141 10.1213"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                      >
-                        <path
-                          id="Vector 32"
-                          d="M0.7 0.7L8.7 8.7L16.7 0.7"
-                          stroke="#323232"
-                          stroke-opacity="1.000000"
-                          stroke-width="2.000000"
-                        />
-                      </svg>
-                    </div>
-                    <ul class="select-body">
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="game-input">
-                  <label>Количество ставок</label>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="input-upstage-block">
-                  <label>При проигрыше</label>
-                  <div class="input-upstage-wrapper">
-                    <button>Сброс</button>
-                    <div class="sub-label">Увеличить на:</div>
-                    <div class="input-upstage">
-                      <input type="text" />
-                      <span>%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="input-upstage-block">
-                  <label>При проигрыше</label>
-                  <div class="input-upstage-wrapper">
-                    <button>Сброс</button>
-                    <div class="sub-label">Увеличить на:</div>
-                    <div class="input-upstage">
-                      <input type="text" />
-                      <span>%</span>
-                    </div>
-                  </div>
-                </div>
-                <button class="game-confirm" id="flipButton">Ставка</button>
-              </div>
+              <button class="game-confirm" id="flipButton">Забрать</button>
             </div>
-            <div class="mines-game">
-              <div class="mines-game-wrapper">
-                <button class="mines-cell active">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-win" src="" alt="" />
-                  <img class="mine-lose" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
-                <button class="mines-cell">
-                  <div></div>
-                  <img class="mine-diamond" src="" alt="" />
-                  <img class="mine-bomb" src="" alt="" />
-                </button>
+            <div class="coinflip-game">
+              <div class="coinflip-main">
+                <div class="game-info">
+                  <h3>0</h3>
+                  <p>Серия</p>
+                </div>
+                <div>
+                  <div class="coin" id="coin">
+                    <div class="coin-side front"></div>
+                    <div class="coin-side back"></div>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <h3>0</h3>
+                  <p>Коэфф</p>
+                </div>
+              </div>
+              <div class="coinflip-history">
+                <img src="../assets/images/coinS.svg" alt="" />
+                <img src="../assets/images/coinK.svg" alt="" />
               </div>
             </div>
           </div>
@@ -1231,7 +1020,7 @@
         <div>
           <div class="footer-top">
             <div class="footer_copyrgh">
-              <a href=""><img src=".../assets/images/logo.svg" alt="" /></a>
+              <a href=""><img src="../assets/images/logo.svg" alt="" /></a>
               <p>© 2024 Spark.com | Все права защищены.</p>
             </div>
             <div class="footer-socials">
@@ -1242,7 +1031,7 @@
           </div>
           <div class="footer-menu">
             <div class="footer-menu-wrapper">
-              <div>
+              <div class="">
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
                   <a href="">Слоты</a>
@@ -1260,6 +1049,7 @@
                   <a href="">Dice</a>
                 </div>
               </div>
+
               <div>
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
@@ -1270,11 +1060,154 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="footer-menu-wrapper mobile">
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-selects-wrapper">
               <div class="language-select">
                 <div class="language-select-header">
                   <input value="Русский" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="language-select-wrapper">
                   <li class="language-select-item">Русский</li>
@@ -1285,7 +1218,33 @@
               <div class="currency-select">
                 <div class="currency-select-header">
                   <input value="RUB" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="currency-select-wrapper">
                   <li class="currency-select-item">USD</li>
@@ -1297,28 +1256,39 @@
           </div>
           <div class="footer-crypto-list">
             <div>
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
-              <img src=".../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
+              <img src="../assets/icons/trx-footer.svg" alt="" />
             </div>
             <p>18+</p>
           </div>
           <div class="footer-bottom">
             <div>
               <h2>Сертификаты</h2>
-              <img src=".../assets/images/license1.png" alt="" />
-              <img src=".../assets/images/license2.png" alt="" />
+              <img src="../assets/images/license1.png" alt="" />
+              <img src="../assets/images/license2.png" alt="" />
             </div>
             <a href="">help@spark.com</a>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("flipButton")
+        .addEventListener("click", function () {
+          const coin = document.getElementById("coin");
+          coin.classList.add("flip");
+          setTimeout(() => {
+            coin.classList.remove("flip");
+          }, 1000);
+        });
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>

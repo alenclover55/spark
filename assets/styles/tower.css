@@ -10,7 +10,7 @@
     background: #141414;
     padding: 33px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     .tower-cell {
       width: 100%;
@@ -18,14 +18,14 @@
       z-index: 1;
       border-radius: 5px;
       background: #191919;
-      height: 59px;
+      height: 40px;
       transition: background 0.3s ease-in-out;
       cursor: pointer;
       div {
         position: absolute;
         top: -4.12px;
         width: 100%;
-        height: 59px;
+        height: 40px;
         border-radius: 5px;
         background: #212121;
         transition: background 0.3s ease-in-out;
@@ -41,6 +41,10 @@
       }
       &.jackpot {
         background: #191919;
+        img {
+          width: 100%;
+          height: 80%;
+        }
         div {
           background: #434343;
           display: flex;
@@ -73,7 +77,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  .active {
+  &.active {
     display: flex;
   }
   h3 {

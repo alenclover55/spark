@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/fonts/fonts.css" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -70,7 +69,7 @@
                 </svg>
                 <img
                   class="dropdown-icon"
-                  src="../assets/icons/arrow-dropdown.svg"
+                  src="./assets/icons/arrow-dropdown.svg"
                   alt=""
                 />
               </div>
@@ -968,681 +967,447 @@
       </div>
     </div>
     <main>
-      <section class="transaction">
+      <section class="coinflip">
         <div class="container">
-          <div class="transaction-header">
-            <div>
-              <svg
-                width="36.000000"
-                height="38.000000"
-                viewBox="0 0 36 38"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="Vector 12"
-                  d="M5.6 31.56L5.6 31.59C5.2 31.98 4.57 31.97 4.19 31.57C3.8 31.16 3.81 30.54 4.21 30.15L4.24 30.15L5.6 31.56ZM4.92 18.39L4.9 18.41C4.34 18.41 3.9 17.97 3.9 17.41C3.9 16.85 4.34 16.41 4.9 16.41L4.92 16.43L4.92 18.39ZM17.83 3.97L17.81 3.95C17.81 3.39 18.25 2.95 18.81 2.95C19.37 2.95 19.81 3.39 19.81 3.95L19.79 3.97L17.83 3.97ZM29.43 16.43L29.45 16.41C30.01 16.41 30.45 16.85 30.45 17.41C30.45 17.97 30.01 18.41 29.45 18.41L29.43 18.39L29.43 16.43ZM33.39 30.15L33.42 30.15C33.82 30.54 33.83 31.16 33.44 31.57C33.05 31.97 32.43 31.98 32.03 31.59L32.03 31.56L33.39 30.15ZM19.79 34.81L19.81 34.83C19.81 35.39 19.37 35.83 18.81 35.83C18.25 35.83 17.81 35.39 17.81 34.83L17.83 34.81L19.79 34.81Z"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                  fill-rule="nonzero"
-                />
-                <path
-                  id="Vector 12"
-                  d="M18.81 17.41L4.9 30.87M29.45 17.41L18.81 17.41L4.9 17.41M18.81 17.41L18.81 3.95M18.81 17.41L32.72 30.87M18.81 17.41L18.81 34.83"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="2.000000"
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                />
-                <ellipse
-                  id="Ellipse 18"
-                  cx="18.818298"
-                  cy="3.958374"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 19"
-                  cx="31.909119"
-                  cy="30.875000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 20"
-                  cx="31.909119"
-                  cy="16.625000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 21"
-                  cx="4.090881"
-                  cy="16.625000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 22"
-                  cx="4.090881"
-                  cy="30.875000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 23"
-                  cx="18.818298"
-                  cy="34.041748"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-              </svg>
-              <h1>Партнерская программа</h1>
-            </div>
-            <span class="close-btn">
-              <svg
-                width="15.012268"
-                height="15.012207"
-                viewBox="0 0 15.0123 15.0122"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="Vector 18"
-                  d="M1.5 1.5L13.5 13.5"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="3.000000"
-                  stroke-linecap="round"
-                />
-                <path
-                  id="Vector 19"
-                  d="M13.5 1.5L1.5 13.5"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="3.000000"
-                  stroke-linecap="round"
-                /></svg
-            ></span>
-          </div>
-          <div class="referals-wrapper">
-            <div class="referals-menu">
-              <button class="active">Депозиты</button>
-              <button>Выводы</button>
-            </div>
-            <div class="referals-mobile-menu">
-              <div class="dropdown-wrapper">
-                <div class="menu-dropdown" id="menuDropdown">
-                  <p class="menu-value">Депозиты</p>
-                  <img
-                    width="20"
-                    src="../assets/icons/arrow-dropdown.svg"
-                    alt=""
-                  />
+          <div class="game-wrapper">
+            <div class="game-settings-block">
+              <div class="game-input">
+                <label>Сумма ставки <span>0.00000 TRX</span></label>
+                <div>
+                  <input type="text" />
+                  <button>1/2</button>
+                  <button>x2</button>
                 </div>
-                <ul class="menu-body" id="menuBody">
+              </div>
+              <div class="risk">
+                <p>Риск</p>
+                <div class="risk-wrapper">
+                  <button class="risk-btn active">Низкий</button>
+                  <button class="risk-btn">Низкий</button>
+                  <button class="risk-btn">Низкий</button>
+                </div>
+              </div>
+              <div class="bombs-counts">
+                <p>Количество рядов</p>
+                <div class="bombs-counts-wrapper">
+                  <button class="bombs-counts-btn active">8</button>
+                  <button class="bombs-counts-btn">9</button>
+                  <button class="bombs-counts-btn">10</button>
+                  <button class="bombs-counts-btn">11</button>
+                  <button class="bombs-counts-btn">12</button>
+                  <button class="bombs-counts-btn">13</button>
+                  <button class="bombs-counts-btn">14</button>
+                  <button class="bombs-counts-btn">15</button>
+                  <button class="bombs-counts-btn">16</button>
+                </div>
+              </div>
+              <button class="game-confirm" id="startButton">Забрать</button>
+            </div>
+            <div class="plinko-game">
+              <div class="score">Очки: <span id="scoreValue">0</span></div>
+              <canvas
+                id="plinkoCanvas"
+                width="624"
+                height="700"
+                style="background-color: #121212"
+              ></canvas>
+              <script>
+                const canvas = document.getElementById("plinkoCanvas");
+                const ctx = canvas.getContext("2d");
+                const startButton = document.getElementById("startButton");
+                const scoreValue = document.getElementById("scoreValue");
+
+                // Настройки игры
+                const PIN_ROWS = 10; // Количество рядов пинов
+                const PIN_SPACING = 60; // Расстояние между пинами
+                const BALL_RADIUS = 8; // Радиус шарика
+                const GRAVITY = 0.5; // Гравитация
+                const FRICTION = 0.8; // Трение при столкновении
+                const HOLE_WIDTH = 70; // Ширина лунки
+                const HOLE_HEIGHT = 20; // Высота лунки
+                const HOLE_Y = canvas.height - 30; // Позиция лунок по Y
+
+                // Лунки и их значения
+                const holes = [];
+                const holeValues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; // Значения для 10 лунок
+                for (let i = 0; i < 9; i++) {
+                  const x = i * HOLE_WIDTH + 20; // Равномерное распределение лунок
+                  holes.push({ x, y: HOLE_Y, value: holeValues[i] });
+                }
+
+                // Создание пинов
+                const pins = [];
+                for (let row = 0; row < PIN_ROWS; row++) {
+                  for (let col = 0; col <= row; col++) {
+                    const x =
+                      canvas.width / 2 -
+                      (row * PIN_SPACING) / 2 +
+                      col * PIN_SPACING;
+                    const y = 50 + row * PIN_SPACING;
+                    pins.push({ x, y });
+                  }
+                }
+
+                // Шарик
+                let ball = {
+                  x: canvas.width / 2,
+                  y: 50,
+                  velocityX: 0,
+                  velocityY: 0,
+                  isFalling: false, // Флаг, указывающий, падает ли шарик
+                };
+
+                // Очки
+                let score = 0;
+
+                // Отрисовка пинов
+                function drawPins() {
+                  ctx.fillStyle = "#FFFFFF";
+                  pins.forEach((pin) => {
+                    ctx.beginPath();
+                    ctx.arc(pin.x, pin.y, 10, 0, Math.PI * 2);
+                    ctx.fill();
+                  });
+                }
+
+                // Отрисовка шарика
+                function drawBall() {
+                  ctx.fillStyle = "#DB9A38";
+                  ctx.beginPath();
+                  ctx.arc(ball.x, ball.y, BALL_RADIUS, 0, Math.PI * 2);
+                  ctx.fill();
+                }
+
+                // Отрисовка лунок
+                function drawHoles() {
+                  ctx.fillStyle = "transparent"; // Синий цвет для лунок
+                  holes.forEach((hole, index) => {
+                    ctx.fillRect(hole.x, hole.y, HOLE_WIDTH, HOLE_HEIGHT); // Отрисовка прямоугольника
+                    ctx.fillStyle = "transparent"; // Белый цвет для текста
+                    ctx.font = "14px Arial";
+                    ctx.textAlign = "center";
+                    ctx.fillText(
+                      hole.value,
+                      hole.x + HOLE_WIDTH / 2,
+                      hole.y + HOLE_HEIGHT / 2 + 5
+                    ); // Текст с ценностью
+                  });
+                }
+
+                // Обновление позиции шарика
+                function updateBall() {
+                  if (ball.isFalling) {
+                    ball.velocityY += GRAVITY;
+                    ball.x += ball.velocityX;
+                    ball.y += ball.velocityY;
+
+                    // Проверка столкновений с пинами
+                    pins.forEach((pin) => {
+                      const dx = ball.x - pin.x;
+                      const dy = ball.y - pin.y;
+                      const distance = Math.sqrt(dx * dx + dy * dy);
+
+                      if (distance < BALL_RADIUS + 5) {
+                        // Отскок шарика
+                        ball.velocityX = (Math.random() - 0.5) * 4;
+                        ball.velocityY = -ball.velocityY * FRICTION;
+                      }
+                    });
+
+                    // Проверка попадания в лунку
+                    holes.forEach((hole) => {
+                      if (
+                        ball.x + BALL_RADIUS > hole.x &&
+                        ball.x - BALL_RADIUS < hole.x + HOLE_WIDTH &&
+                        ball.y + BALL_RADIUS > hole.y &&
+                        ball.y - BALL_RADIUS < hole.y + HOLE_HEIGHT
+                      ) {
+                        // Шарик попал в лунку
+                        ball.isFalling = false;
+                        score += hole.value; // Добавляем очки
+                        scoreValue.textContent = score; // Обновляем отображение очков
+                        resetBall(); // Сбрасываем шарик
+                      }
+                    });
+
+                    // Проверка выхода за пределы экрана
+                    if (ball.y + BALL_RADIUS > canvas.height) {
+                      resetBall();
+                    }
+                  }
+                }
+
+                // Сброс шарика в начальное положение
+                function resetBall() {
+                  ball.x = canvas.width / 2;
+                  ball.y = 50;
+                  ball.velocityX = 0;
+                  ball.velocityY = 0;
+                  ball.isFalling = false; // Останавливаем падение шарика
+                }
+
+                // Запуск шарика
+                function startBall() {
+                  if (!ball.isFalling) {
+                    ball.isFalling = true;
+                    ball.velocityX = (Math.random() - 0.5) * 4; // Случайное начальное движение по X
+                    ball.velocityY = 0; // Начальная скорость по Y
+                  }
+                }
+
+                // Основной цикл игры
+                function gameLoop() {
+                  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                  drawPins(); // Отрисовка пинов
+                  drawHoles(); // Отрисовка лунок
+                  drawBall(); // Отрисовка шарика
+                  updateBall(); // Обновление позиции шарика
+
+                  requestAnimationFrame(gameLoop);
+                }
+
+                // Обработчик нажатия на кнопку
+                startButton.addEventListener("click", startBall);
+
+                // Запуск игры
+                gameLoop();
+              </script>
+              <div class="holes-list">
+                <div class="hole">
                   <svg
-                    width="22.516602"
-                    height="15.000000"
-                    viewBox="0 0 22.5166 15"
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                   >
                     <path
-                      id="Polygon 3"
-                      d="M11.25 0L0 15L22.51 15L11.25 0Z"
-                      fill="#2C2C2C"
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
                       fill-opacity="1.000000"
-                      fill-rule="evenodd"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
                     />
                   </svg>
-                  <li tab-id="tab1">Депозиты</li>
-                  <li tab-id="tab2">Выводы</li>
-                </ul>
-              </div>
-            </div>
-            <div id="tab1" class="referal-tab tab1 wide active">
-              <div class="deposite-withdraw-table">
-                <div class="table-header">
-                  <p>Дата / Статус</p>
-                  <p>Реквизиты</p>
-                  <p>Сумма</p>
+                  <span>5.7x</span>
                 </div>
-                <div class="table-body">
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
                 </div>
-              </div>
-              <div class="table-pagination">
-                <button>Назад</button>
-                <button>Вперёд</button>
-              </div>
-            </div>
-            <div id="tab2" class="referal-tab tab1 wide">
-              <div class="deposite-withdraw-table">
-                <div class="table-header">
-                  <p>Дата / Статус</p>
-                  <p>Реквизиты</p>
-                  <p>Сумма</p>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
                 </div>
-                <div class="table-body">
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="left-side">
-                      <span class="row-label">Дата / Статус</span>
-                      <div>
-                        <h4>Успешно</h4>
-                        <p>20.10.2024</p>
-                      </div>
-                    </div>
-                    <div>
-                      <span class="row-label">Реквизиты</span>
-                      <p>0.00000000</p>
-                    </div>
-                    <div class="right-side">
-                      <span class="row-label">Сумма</span>
-                      <div>
-                        <p>0.00000000</p>
-                        <img
-                          width="19"
-                          height="19"
-                          src="../assets/icons/trx_icon.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
                 </div>
-              </div>
-              <div class="table-pagination">
-                <button>Назад</button>
-                <button>Вперёд</button>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
+                </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
+                </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
+                </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
+                </div>
+                <div class="hole">
+                  <svg
+                    width="53.454346"
+                    height="44.901611"
+                    viewBox="0 0 53.4543 44.9016"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Rectangle 193"
+                      d="M13.33 10.06L23.39 13.62C25.54 14.38 27.9 14.38 30.06 13.62L40.11 10.06C46.62 7.76 53.45 12.58 53.45 19.49L53.45 34.9C53.45 40.42 48.97 44.9 43.45 44.9L10 44.9C4.47 44.9 0 40.42 0 34.9L0 19.49C0 12.58 6.82 7.76 13.33 10.06Z"
+                      fill="#C42C2C"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Rectangle 192"
+                      d="M13.33 4.71L23.39 8.27C25.54 9.04 27.9 9.04 30.06 8.27L40.11 4.71C46.62 2.41 53.45 7.24 53.45 14.14L53.45 29.55C53.45 35.07 48.97 39.55 43.45 39.55L10 39.55C4.47 39.55 0 35.07 0 29.55L0 14.14C0 7.24 6.82 2.41 13.33 4.71Z"
+                      fill="#FF3838"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span>5.7x</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1665,7 +1430,7 @@
           </div>
           <div class="footer-menu">
             <div class="footer-menu-wrapper">
-              <div>
+              <div class="">
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
                   <a href="">Слоты</a>
@@ -1683,6 +1448,7 @@
                   <a href="">Dice</a>
                 </div>
               </div>
+
               <div>
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
@@ -1693,11 +1459,154 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="footer-menu-wrapper mobile">
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-selects-wrapper">
               <div class="language-select">
                 <div class="language-select-header">
                   <input value="Русский" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="language-select-wrapper">
                   <li class="language-select-item">Русский</li>
@@ -1708,7 +1617,33 @@
               <div class="currency-select">
                 <div class="currency-select-header">
                   <input value="RUB" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="currency-select-wrapper">
                   <li class="currency-select-item">USD</li>
@@ -1742,6 +1677,17 @@
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("flipButton")
+        .addEventListener("click", function () {
+          const coin = document.getElementById("coin");
+          coin.classList.add("flip");
+          setTimeout(() => {
+            coin.classList.remove("flip");
+          }, 1000);
+        });
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>

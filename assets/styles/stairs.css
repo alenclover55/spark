@@ -3,16 +3,21 @@
   border-radius: 0px 5px 5px 0px;
   background: #121212;
   padding: 40px 0;
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-columns: repeat(13, 1fr);
+  display: flex;
   padding: 20px;
-  justify-content: center;
-  gap: 25px 2.75px;
+  flex-direction: column;
+  gap: 25px;
+  .stairs-row {
+    display: flex;
+    align-items: center;
+    gap: 2.75px;
+  }
   .stair {
     border-radius: 5px;
     background: #191919;
     height: 26px;
+    max-width: 42.14px;
+    width: 100%;
   }
 }
 @media (max-width: 720px) {
@@ -21,16 +26,13 @@
     border-radius: 0px 5px 5px 0px;
     background: #121212;
     padding: 40px 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(9, 1fr);
     padding: 20px;
     justify-content: center;
     gap: 10px 5px;
     .stair {
       border-radius: 5px;
       background: #191919;
-      height: 26px;
+      height: 18px;
     }
   }
 }

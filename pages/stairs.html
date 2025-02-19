@@ -6,33 +6,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/fonts/fonts.css" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../assets/styles/stairs.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
-    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
-          <img class="logo" src="./assets/images/logo.svg" alt="logo" />
+          <img class="logo" src="../assets/images/logo.svg" alt="logo" />
           <img
             class="logo-mobile"
-            src="./assets/images/logo-mobile.svg"
+            src="../assets/images/logo-mobile.svg"
             alt=""
           />
           <div class="currency-wallet-wrapper">
             <div class="currency-wallet">
               <div class="currency-field">
-                <input readonly type="text" value="0.00" />
+                <input readonly type="text" value="0.00000000 " />
                 <svg
-                  width="20.000000"
-                  height="20.689453"
+                  width="14"
+                  height="14"
                   viewBox="0 0 20 20.6895"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,11 +76,14 @@
                 </svg>
                 <img
                   class="dropdown-icon"
-                  src="./assets/icons/arrow-dropdown.svg"
+                  src="../assets/icons/arrow-dropdown.svg"
                   alt=""
                 />
               </div>
-              <button>Кошелёк</button>
+              <button>
+                <p>Кошелёк</p>
+                <img src="../assets/icons/wallet-white.svg" alt="" />
+              </button>
               <div class="currency-select-list">
                 <svg
                   class="currency-triangle"
@@ -151,7 +152,7 @@
                   <p><span>₽</span> 2.00</p>
                   <div>
                     <img
-                      data-image="./assets/icons/trx_icon.svg"
+                      data-image="../assets/icons/trx_icon.svg"
                       src="../assets/icons/trx_icon.svg"
                       alt=""
                     />
@@ -213,9 +214,8 @@
                   fill-rule="evenodd"
                 />
               </svg>
-
-              <a class="profile-menu-item" href=""
-                ><svg
+              <a id="wallet-btn" class="profile-menu-item">
+                <svg
                   width="20.000000"
                   height="16.000000"
                   viewBox="0 0 20 16"
@@ -231,10 +231,10 @@
                     fill-rule="nonzero"
                   />
                 </svg>
-                Кошелек</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Кошелек
+              </a>
+              <a class="profile-menu-item" href="./pages/vip.html">
+                <svg
                   width="25.000000"
                   height="24.000000"
                   viewBox="0 0 25 24"
@@ -281,10 +281,10 @@
                     />
                   </g>
                 </svg>
-                ВИП</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                ВИП
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="18.000000"
                   height="20.000000"
                   viewBox="0 0 18 20"
@@ -363,10 +363,10 @@
                     fill-opacity="1.000000"
                   />
                 </svg>
-                Партнерам</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Партнерам
+              </a>
+              <a class="profile-menu-item" href="./pages/transaction.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -442,10 +442,10 @@
                     </g>
                   </g>
                 </svg>
-                Транзакции</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Транзакции
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="20.003906"
                   height="20.000000"
                   viewBox="0 0 20.0039 20"
@@ -481,10 +481,10 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                Статистика</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Статистика
+              </a>
+              <a class="profile-menu-item" href="./pages/settings.html">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -524,10 +524,10 @@
                     />
                   </g>
                 </svg>
-                Настройки</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Настройки
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="21.000000"
                   height="20.000000"
                   viewBox="0 0 21 20"
@@ -567,10 +567,10 @@
                     />
                   </g>
                 </svg>
-                Поддержка</a
-              >
-              <a class="profile-menu-item" href=""
-                ><svg
+                Поддержка
+              </a>
+              <a class="profile-menu-item" href="">
+                <svg
                   width="22.000000"
                   height="22.000000"
                   viewBox="0 0 22 22"
@@ -610,8 +610,8 @@
                     />
                   </g>
                 </svg>
-                Выход</a
-              >
+                Выход
+              </a>
             </div>
           </div>
         </div>
@@ -976,751 +976,411 @@
       </div>
     </div>
     <main>
-      <section class="referals">
+      <section class="stairs-page">
         <div class="container">
-          <div class="referals-header">
-            <div>
-              <svg
-                width="36.000000"
-                height="38.000000"
-                viewBox="0 0 36 38"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="Vector 12"
-                  d="M5.6 31.56L5.6 31.59C5.2 31.98 4.57 31.97 4.19 31.57C3.8 31.16 3.81 30.54 4.21 30.15L4.24 30.15L5.6 31.56ZM4.92 18.39L4.9 18.41C4.34 18.41 3.9 17.97 3.9 17.41C3.9 16.85 4.34 16.41 4.9 16.41L4.92 16.43L4.92 18.39ZM17.83 3.97L17.81 3.95C17.81 3.39 18.25 2.95 18.81 2.95C19.37 2.95 19.81 3.39 19.81 3.95L19.79 3.97L17.83 3.97ZM29.43 16.43L29.45 16.41C30.01 16.41 30.45 16.85 30.45 17.41C30.45 17.97 30.01 18.41 29.45 18.41L29.43 18.39L29.43 16.43ZM33.39 30.15L33.42 30.15C33.82 30.54 33.83 31.16 33.44 31.57C33.05 31.97 32.43 31.98 32.03 31.59L32.03 31.56L33.39 30.15ZM19.79 34.81L19.81 34.83C19.81 35.39 19.37 35.83 18.81 35.83C18.25 35.83 17.81 35.39 17.81 34.83L17.83 34.81L19.79 34.81Z"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                  fill-rule="nonzero"
-                />
-                <path
-                  id="Vector 12"
-                  d="M18.81 17.41L4.9 30.87M29.45 17.41L18.81 17.41L4.9 17.41M18.81 17.41L18.81 3.95M18.81 17.41L32.72 30.87M18.81 17.41L18.81 34.83"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="2.000000"
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                />
-                <ellipse
-                  id="Ellipse 18"
-                  cx="18.818298"
-                  cy="3.958374"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 19"
-                  cx="31.909119"
-                  cy="30.875000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 20"
-                  cx="31.909119"
-                  cy="16.625000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 21"
-                  cx="4.090881"
-                  cy="16.625000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 22"
-                  cx="4.090881"
-                  cy="30.875000"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-                <ellipse
-                  id="Ellipse 23"
-                  cx="18.818298"
-                  cy="34.041748"
-                  rx="4.090894"
-                  ry="3.958333"
-                  fill="#434343"
-                  fill-opacity="1.000000"
-                />
-              </svg>
-              <h1>Партнерская программа</h1>
-            </div>
-            <span class="close-btn">
-              <svg
-                width="15.012268"
-                height="15.012207"
-                viewBox="0 0 15.0123 15.0122"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="Vector 18"
-                  d="M1.5 1.5L13.5 13.5"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="3.000000"
-                  stroke-linecap="round"
-                />
-                <path
-                  id="Vector 19"
-                  d="M13.5 1.5L1.5 13.5"
-                  stroke="#434343"
-                  stroke-opacity="1.000000"
-                  stroke-width="3.000000"
-                  stroke-linecap="round"
-                /></svg
-            ></span>
-          </div>
-          <div class="referals-wrapper">
-            <div class="referals-menu">
-              <button class="active">Обзор</button>
-              <button>Зарабаток</button>
-              <button>Рефералы</button>
-            </div>
-            <div class="referals-mobile-menu">
-              <div class="dropdown-wrapper">
-                <div class="menu-dropdown" id="menuDropdown">
-                  <p class="menu-value">Обзор</p>
-                  <img
-                    width="20"
-                    src="../assets/icons/arrow-dropdown.svg"
-                    alt=""
-                  />
-                </div>
-                <ul class="menu-body" id="menuBody">
-                  <svg
-                    width="22.516602"
-                    height="15.000000"
-                    viewBox="0 0 22.5166 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <path
-                      id="Polygon 3"
-                      d="M11.25 0L0 15L22.51 15L11.25 0Z"
-                      fill="#2C2C2C"
-                      fill-opacity="1.000000"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <li tab-id="tab1">Обзор</li>
-                  <li tab-id="tab2">Заработок</li>
-                  <li tab-id="tab3">Рефералы</li>
-                </ul>
+          <div class="game-wrapper">
+            <div class="game-settings-block">
+              <div class="game-mode-wrapper">
+                <button data-mode="hand" class="game-mode-btn active">
+                  Ручной режим
+                </button>
+                <button data-mode="auto" class="game-mode-btn">
+                  Авторежим
+                </button>
               </div>
-            </div>
-            <div id="tab1" class="referal-tab active">
-              <div class="stand">
-                <h1><span>Spark</span><br /><span>Partners</span></h1>
-              </div>
-              <p class="pr-text">
-                Рекламируйте наш бренд и зарабатывайте деньги, участвуя в
-                партнерской программе Stake.com! Вы будете получать партнерскую
-                комиссию за каждого пользователя, который зарегистрируется и
-                будет играть на Stake.com посредством вашей ссылки.
-              </p>
-              <p class="pr-text">
-                Как участник партнерской программы Stake.com, вы зарабатываете
-                комиссию на всех ставках, сделанных рефералами в казино или на
-                спортивные события. Это означает, что, в отличие от традиционных
-                партнерских программ, вы зарабатываете ту же комиссию независимо
-                от того, выиграли они или проиграли!
-              </p>
-              <div class="referal-link">
-                <div class="input-form" style="width: 282px">
-                  <input value="spark.com/?c=763653db54" type="text" />
-                  <button class="copy-btn">
-                    <svg
-                      width="14.776123"
-                      height="14.776123"
-                      viewBox="0 0 14.7761 14.7761"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                    >
-                      <defs>
-                        <clipPath id="clip51_11363">
-                          <rect
-                            id="clarity:copy-solid"
-                            rx="0.000000"
-                            width="13.776119"
-                            height="13.776119"
-                            transform="translate(0.500000 0.500000)"
-                            fill="white"
-                            fill-opacity="0"
-                          />
-                        </clipPath>
-                      </defs>
-                      <rect
-                        id="clarity:copy-solid"
-                        rx="0.000000"
-                        width="13.776119"
-                        height="13.776119"
-                        transform="translate(0.500000 0.500000)"
-                        fill="#FFFFFF"
-                        fill-opacity="0"
-                      />
-                      <g clip-path="url(#clip51_11363)">
-                        <path
-                          id="Vector"
-                          d="M11.08 1.46C11.08 1.37 11.06 1.29 11.03 1.21C11 1.13 10.95 1.06 10.89 1C10.83 0.94 10.76 0.9 10.68 0.86C10.6 0.83 10.52 0.82 10.43 0.82L2.28 0.82C2.2 0.82 2.11 0.83 2.03 0.86C1.96 0.9 1.89 0.94 1.83 1C1.77 1.06 1.72 1.13 1.69 1.21C1.65 1.29 1.64 1.37 1.64 1.46L1.64 11.67C1.64 11.75 1.65 11.84 1.69 11.91C1.72 11.99 1.77 12.06 1.83 12.12C1.89 12.18 1.96 12.23 2.03 12.26C2.11 12.29 2.2 12.31 2.28 12.31L2.49 12.31L2.49 1.67L11.08 1.67L11.08 1.46Z"
-                          fill="#FFFFFF"
-                          fill-opacity="1.000000"
-                          fill-rule="nonzero"
-                        />
-                        <path
-                          id="Vector"
-                          d="M3.89 2.46L12.1 2.46C12.44 2.46 12.72 2.73 12.72 3.07L12.72 13.33C12.72 13.67 12.44 13.95 12.1 13.95L3.89 13.95C3.55 13.95 3.28 13.67 3.28 13.33L3.28 3.07C3.28 2.73 3.55 2.46 3.89 2.46Z"
-                          fill="#FFFFFF"
-                          fill-opacity="1.000000"
-                          fill-rule="evenodd"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <p>Реферальная ссылка</p>
-              </div>
-            </div>
-            <div id="tab2" class="referal-tab tab2 wide">
-              <div class="referals-currency-table">
-                <div class="table-header">
-                  <p>Доступно</p>
-                  <p>Комиссия</p>
-                  <p>Заработано</p>
-                </div>
-                <div class="table-body">
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
+              <div class="hand-mode">
+                <div class="mode-wrapper">
+                  <div class="game-input">
+                    <label>Сумма ставки <span>0.00000 TRX</span></label>
+                    <div>
+                      <input type="text" />
+                      <button class="lined">1/2</button>
+                      <button>x2</button>
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
+                  <div class="bombs-counts">
+                    <p>Количество бомб</p>
+                    <div class="bombs-counts-wrapper">
+                      <button class="bombs-counts-btn active">1</button>
+                      <button class="bombs-counts-btn">2</button>
+                      <button class="bombs-counts-btn">3</button>
+                      <button class="bombs-counts-btn">4</button>
+                      <button class="bombs-counts-btn">5</button>
+                      <button class="bombs-counts-btn">6</button>
+                      <button class="bombs-counts-btn">7</button>
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
+                  <div class="game-input">
+                    <label>Общая ставка<span>0.00000 TRX</span></label>
+                    <div>
+                      <input type="text" />
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div class="currency-block">
-                      <p class="row-label">Доступно</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Комиссия</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="currency-block">
-                      <p class="row-label">Заработано</p>
-                      <div class="currency-value">
-                        <p>0.00000000</p>
-                        <img src="../assets/icons/trx_icon.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
+                  <button class="game-confirm">Ставка</button>
                 </div>
               </div>
-              <button class="withdraw-btn">Вывести зарабаток</button>
-              <p class="withdraw-info">
-                Партнерская комиссия будет переведена на ваш доступный баланс.
-              </p>
-            </div>
-            <div id="tab3" class="referal-tab wide">
-              <div class="referal-table">
-                <div class="table-header">
-                  <p>Имя пользователя</p>
-                  <p>Зарегистрирован</p>
-                  <p>Всего депозитов</p>
-                  <p>Оборот</p>
-                  <p>Зарабаток</p>
-                </div>
-                <div class="table-body">
-                  <div class="table-row">
+              <div class="auto-mode">
+                <div class="mode-wrapper">
+                  <div class="game-input">
+                    <label>Сумма ставки <span>0.00000 TRX</span></label>
                     <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
+                      <input type="text" />
+                      <button class="lined">1/2</button>
+                      <button>x2</button>
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
+                  <div class="bombs-counts">
+                    <p>Количество бомб</p>
+                    <div class="bombs-counts-wrapper">
+                      <button class="bombs-counts-btn active">1</button>
+                      <button class="bombs-counts-btn">2</button>
+                      <button class="bombs-counts-btn">3</button>
+                      <button class="bombs-counts-btn">4</button>
+                      <button class="bombs-counts-btn">5</button>
+                      <button class="bombs-counts-btn">6</button>
+                      <button class="bombs-counts-btn">7</button>
                     </div>
                   </div>
-                  <div class="table-row">
+                  <div class="game-input">
+                    <label>Количество ставок</label>
                     <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
+                      <input type="text" />
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
+                  <div class="input-upstage-block">
+                    <label>При проигрыше</label>
+                    <div class="input-upstage-wrapper">
+                      <button>Сброс</button>
+                      <div class="sub-label">Увеличить на:</div>
+                      <div class="input-upstage">
+                        <input type="text" />
+                        <span>%</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
+                  <div class="input-upstage-block">
+                    <label>При проигрыше</label>
+                    <div class="input-upstage-wrapper">
+                      <button>Сброс</button>
+                      <div class="sub-label">Увеличить на:</div>
+                      <div class="input-upstage">
+                        <input type="text" />
+                        <span>%</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
-                  <div class="table-row">
-                    <div>
-                      <span class="row-label">Имя пользовател</span>
-                      <p>User</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Зарегистрирован</span>
-                      <p>19.10.2024</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Всего дипозитов</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Оборот</span>
-                      <p>10000$</p>
-                    </div>
-                    <div>
-                      <span class="row-label">Заработок</span>
-                      <p>10000$</p>
-                    </div>
-                  </div>
+                  <button class="game-confirm">Начать автоставки</button>
                 </div>
               </div>
-              <div class="table-pagination">
-                <button>Назад</button>
-                <button>Вперёд</button>
+            </div>
+            <div class="stairs-game">
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+              </div>
+              <div class="stairs-row">
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
+                <div class="stair"></div>
               </div>
             </div>
           </div>
@@ -1743,7 +1403,7 @@
           </div>
           <div class="footer-menu">
             <div class="footer-menu-wrapper">
-              <div>
+              <div class="">
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
                   <a href="">Слоты</a>
@@ -1761,6 +1421,7 @@
                   <a href="">Dice</a>
                 </div>
               </div>
+
               <div>
                 <h3>Казино</h3>
                 <div class="footer-menu-items">
@@ -1771,11 +1432,154 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="footer-menu-wrapper mobile">
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+              <div class="drop-down">
+                <div class="drop-down-header">
+                  <h3>Казино</h3>
+                  <svg
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="drop-down-body">
+                  <a href="">Contact Us</a>
+                  <a href="">Bonus Terms</a>
+                  <a href="">About Us</a>
+                  <a href="">FAQ</a>
+                  <a href="">Affiliates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-selects-wrapper">
               <div class="language-select">
                 <div class="language-select-header">
                   <input value="Русский" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="language-select-wrapper">
                   <li class="language-select-item">Русский</li>
@@ -1786,7 +1590,33 @@
               <div class="currency-select">
                 <div class="currency-select-header">
                   <input value="RUB" readonly type="text" />
-                  <img src="../assets/icons/arrow-dropdown.svg" alt="" />
+                  <svg
+                    class="rotated-180"
+                    width="24.000000"
+                    height="24.000000"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      id="Iconex/Light/Down 2"
+                      rx="0.000000"
+                      width="23.000000"
+                      height="23.000000"
+                      transform="translate(24.500000 0.500000) rotate(90.000000)"
+                      fill="#FFFFFF"
+                      fill-opacity="0"
+                    />
+                    <path
+                      id="Vector 140"
+                      d="M5 15L11.21 9.66C11.66 9.28 12.33 9.28 12.78 9.66L19 15"
+                      stroke="#797979"
+                      stroke-opacity="1.000000"
+                      stroke-width="1.500000"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
                 <ul class="currency-select-wrapper">
                   <li class="currency-select-item">USD</li>
@@ -1820,8 +1650,13 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <script>
+      $("#dice-range").ionRangeSlider({
+        min: 0,
+        max: 100,
+        grid: true,
+      });
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>

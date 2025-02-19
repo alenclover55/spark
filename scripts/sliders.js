@@ -6,7 +6,7 @@ const sparkGamesSlider = new Swiper(".spark-games", {
   },
   breakpoints: {
     1680: {
-      slidesPerView: 6.6,
+      slidesPerView: 7.5,
     },
     1500: {
       slidesPerView: 5.5,
@@ -18,7 +18,7 @@ const sparkGamesSlider = new Swiper(".spark-games", {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-    0: { slidesPerView: 2 },
+    0: { slidesPerView: 3 },
   },
 });
 
@@ -31,7 +31,7 @@ const sparkSlotsSlider = new Swiper(".slots-slider", {
   },
   breakpoints: {
     1680: {
-      slidesPerView: 6.6,
+      slidesPerView: 7.5,
     },
     1500: {
       slidesPerView: 5.5,
@@ -43,20 +43,19 @@ const sparkSlotsSlider = new Swiper(".slots-slider", {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-    0: { slidesPerView: 2, spaceBetween: 20 },
+    0: { slidesPerView: 3, spaceBetween: 20 },
   },
 });
 
 const sparkProvidersSlider = new Swiper(".providers-slider", {
-  slidesPerView: 6.6,
-  spaceBetween: 15,
   navigation: {
     nextEl: ".providers-slider-next",
     prevEl: ".providers-slider-prev",
   },
   breakpoints: {
     1680: {
-      slidesPerView: 6.6,
+      slidesPerView: 7.5,
+      spaceBetween: 11,
     },
     1500: {
       slidesPerView: 5.5,
@@ -100,25 +99,19 @@ const sparkLiveCasinoSlider = new Swiper(".lives-casino-slider", {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-    0: { slidesPerView: 2, spaceBetween: 20 },
+    0: { slidesPerView: 3, spaceBetween: 20 },
   },
 });
 
 const coinsSlider = new Swiper(".coin-tracker", {
-  spaceBetween: 10,
-  slidesPerView: 5,
   navigation: {
     nextEl: ".btn-right",
     prevEl: ".btn-left",
   },
   breakpoints: {
     1180: {
-      slidesPerView: 6,
+      slidesPerView: "auto",
+      spaceBetween: 10,
     },
-    420: { slidesPerView: 5, spaceBetween: 8 },
-    370: {
-      slidesPerView: 4,
-    },
-    0: { slidesPerView: 3, spaceBetween: 8 },
   },
 });

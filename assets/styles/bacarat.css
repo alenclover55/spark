@@ -4,7 +4,7 @@
 .bacarat-game {
   position: relative;
   overflow: hidden;
-  padding: 79px 139px 0 137px;
+  padding: 100px 30px 20px 30px;
   background: #121212;
   width: 100%;
 
@@ -23,7 +23,7 @@
   }
   .game-title {
     position: relative;
-    max-width: 558px;
+    max-width: 432px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -38,11 +38,11 @@
       position: relative;
       z-index: 2;
       color: #fff;
-      font-family: stolzlMedium, sans-serif;
-      font-size: 24px;
+      font-family: stolzlRegular, sans-serif;
+      font-size: 20px;
       line-height: 29px;
       text-align: center;
-      padding: 23px 0;
+      padding: 18px 0;
     }
   }
   .game-bet {
@@ -50,14 +50,15 @@
     justify-content: center;
     align-items: center;
     margin-top: 66px;
-    margin-bottom: 70px;
-    gap: 25px;
+    margin-bottom: 25px;
+    padding: 0 60px;
+    gap: 15px;
     .bet-variant {
       border: 2px solid #434343;
       border-radius: 5px;
       background: #191919;
-      width: 230px;
-      height: 158px;
+      width: 100%;
+      height: 109px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -123,7 +124,7 @@
 }
 @media (max-width: 1680px) {
   .bacarat-game {
-    padding: 110px 60px 0 60px;
+    padding: 110px 60px 20px 60px;
   }
 }
 @media (max-width: 720px) {
