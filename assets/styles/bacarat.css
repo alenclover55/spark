@@ -127,7 +127,12 @@
     padding: 110px 60px 20px 60px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 1480px) {
+  .bacarat-game {
+    padding: 16px;
+  }
+}
+@media (max-width: 900px) {
   .bacarat-game {
     padding: 70px 10px 0 10px;
   }
@@ -146,9 +151,13 @@
   }
   .bacarat-game {
     .game-title {
+      max-width: 280px;
+      img {
+        width: 280px;
+      }
       h2 {
         font-size: 12px;
-        padding: 10px 0;
+        padding: 6px 0;
       }
     }
     .game-bet {

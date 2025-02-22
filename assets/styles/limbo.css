@@ -59,8 +59,38 @@
     }
   }
 }
+@media (max-width: 1680px) {
+  .limbo-game {
+    max-width: 620px;
+  }
+}
+@media (max-width: 1480px) {
+  .limbo-game {
+    max-width: 420px;
+  }
+}
+@media (max-width: 1180px) {
+  .limbo-game {
+    padding: 15px;
+    max-width: 100%;
+    .game-mult {
+      font-size: 64px;
+      margin: 50px 0;
+      span {
+        font-size: 32px;
+      }
+    }
+    .game-inputs {
+      div {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .limbo {
     .game-settings-block {
       .game-input {
@@ -78,6 +108,7 @@
   }
   .limbo-game {
     padding: 15px 15px 15px 15px;
+    max-width: 100%;
     .game-mult {
       font-size: 64px;
       margin: 50px 0;

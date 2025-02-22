@@ -151,7 +151,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .dice-game {
     padding: 30px 0;
     .dice-range-midlight {

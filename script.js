@@ -91,7 +91,7 @@ $(document).ready(function () {
     $(".currency-select-list").hide();
   });
 
-  $(".dropdown-icon").on("click", function () {
+  $(".currency-field").on("click", function () {
     $(".dropdown-icon").toggleClass("rotated-180");
     $(".currency-select-list").fadeToggle();
   });

@@ -226,12 +226,35 @@
     }
   }
 }
+.game-steps {
+  overflow-x: auto;
+  .game-step {
+    position: relative;
+  }
+}
+@media (max-width: 1480px) {
+  .card-placeholder {
+    width: 92px;
+    height: 150px;
+  }
+  .side-wrapper {
+    p {
+      font-size: 14px;
+    }
+  }
+  .hilo-input {
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
 @media (max-width: 1180px) {
   .game-input-wrapper {
     flex-direction: column;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .game-input-wrapper {
     flex-direction: column;
   }
@@ -296,16 +319,11 @@
       display: none;
     }
   }
-  .hilo-input {
-    &:nth-child(1),
-    &:nth-child(2) {
-      display: none;
-    }
-  }
 
   .game-steps {
     overflow-x: auto;
     .game-step {
+      position: relative;
       width: 40px;
     }
     .play-card {

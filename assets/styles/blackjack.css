@@ -102,14 +102,11 @@
 .blackjack-cards {
   display: flex;
   align-items: center;
-  gap: 25px;
+  flex-direction: column;
   padding-right: 130px;
-  .card-games-button {
-    width: 103px;
-  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .blackjack-game {
     padding-top: 60px !important;
     padding-bottom: 30px;
@@ -139,8 +136,6 @@
     }
   }
   .blackjack-cards {
-    align-items: center;
-    justify-content: center;
     padding-right: 0;
     margin: 20px 0;
   }

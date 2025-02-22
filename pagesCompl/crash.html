@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../assets/fonts/fonts.css" />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../assets/styles/bacarat.css" />
+    <link rel="stylesheet" href="../assets/styles/blackjack.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -832,8 +830,8 @@
               fill-opacity="1.000000"
             />
           </svg>
-          <span>Партнерам</span>
-        </a>
+          <span>Партнерам</span></a
+        >
         <a href="">
           <svg
             width="25.000000"
@@ -881,8 +879,8 @@
               />
             </g>
           </svg>
-          <span>Турниры</span>
-        </a>
+          <span>Турниры</span></a
+        >
         <a href="">
           <svg
             width="25.000000"
@@ -930,9 +928,8 @@
                 fill-opacity="1.000000"
                 fill-rule="nonzero"
               />
-            </g>
-          </svg>
-          <span>ВИП</span>
+            </g></svg
+          ><span>ВИП</span>
         </a>
       </div>
       <div class="menu-group">
@@ -974,196 +971,159 @@
                 fill-opacity="1.000000"
                 fill-rule="nonzero"
               />
-            </g>
-          </svg>
-          <span>Поддержка</span>
-        </a>
+            </g></svg
+          ><span>Поддержка</span></a
+        >
       </div>
     </div>
     <main>
-      <section class="bacarat">
+      <section class="crash">
         <div class="container">
           <div class="game-wrapper">
             <div class="game-settings-block">
-              <div class="coin-select-wrapper">
-                <p>
-                  Стоимость фишки
-                  <span
-                    >$0.00<img
-                      width="20"
-                      src="../assets/icons/trx_icon.svg"
-                      alt=""
-                  /></span>
-                </p>
-                <div class="coin-select">
-                  <button class="btn btn-left">
-                    <svg
-                      width="8.621277"
-                      height="14.414185"
-                      viewBox="0 0 8.62128 14.4142"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                    >
-                      <path
-                        id="Vector 50"
-                        d="M7.91 13.7L1.41 7.2L7.91 0.7"
-                        stroke="#FFFFFF"
-                        stroke-opacity="1.000000"
-                        stroke-width="2.000000"
-                      />
-                    </svg>
-                  </button>
-                  <div class="swiper coin-tracker">
-                    <div class="swiper-wrapper">
-                      <button class="swiper-slide coin-btn">
-                        <span>1</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>10</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>100</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>1К</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>10К</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>100К</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>1М</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>10М</span>
-                      </button>
-                      <button class="swiper-slide coin-btn">
-                        <span>100М</span>
-                      </button>
-                    </div>
-                  </div>
-                  <button class="btn btn-right">
-                    <svg
-                      width="8.621307"
-                      height="14.414185"
-                      viewBox="0 0 8.62131 14.4142"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                    >
-                      <path
-                        id="Vector 50"
-                        d="M0.7 0.7L7.2 7.2L0.7 13.7"
-                        stroke="#FFFFFF"
-                        stroke-opacity="1.000000"
-                        stroke-width="2.000000"
-                      />
-                    </svg>
-                  </button>
+              <div class="game-input">
+                <label>Сумма ставки <span>0.00000 TRX</span></label>
+                <div>
+                  <input type="text" />
+                  <button class="lined">1/2</button>
+                  <button>x2</button>
                 </div>
               </div>
               <div class="game-input">
-                <label>Общая ставка<span>0.00000 TRX</span></label>
+                <label>Целевой коэффициент <span>0.00000 TRX</span></label>
+                <div>
+                  <input type="text" />
+                  <button class="lined">1/2</button>
+                  <button>x2</button>
+                </div>
+              </div>
+              <div class="game-input">
+                <label>Общая прибыль (1.00x) <span>0.00000 TRX</span></label>
                 <div>
                   <input type="text" />
                 </div>
               </div>
-              <button class="game-confirm" id="flipButton">Ставка</button>
+              <button class="game-confirm" id="flipButton">
+                Сделать ставку (след. раунд)
+              </button>
+              <div class="crash-last-games-list">
+                <div class="crash-last-games-header">
+                  <img src="../assets/icons/team.svg" alt="" />
+                  <div>
+                    <img src="../assets/icons/trx_icon.svg" alt="" />
+                    <p>$5,555.55</p>
+                  </div>
+                </div>
+                <div class="crash-last-game-body">
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p class="win">$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p>$5,555.55</p>
+                    </div>
+                  </div>
+                  <div class="crash-last-game-item">
+                    <div>
+                      <p>Username</p>
+                      <p>100<span>x</span></p>
+                    </div>
+                    <div>
+                      <img src="../assets/icons/trx_icon.svg" alt="" />
+                      <p class="win">$5,555.55</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="bacarat-game">
-              <div class="top-game-cards">
-                <img src="../assets/images/spark-game-card.svg" alt="" />
-                <img src="../assets/images/spark-game-card.svg" alt="" />
-                <img src="../assets/images/spark-game-card.svg" alt="" />
-                <img src="../assets/images/spark-game-card.svg" alt="" />
+            <div class="crash-game">
+              <div class="game-top-history">
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
+                <div class="game-top-history-item lose">35.32</div>
+                <div class="game-top-history-item win">35.32</div>
               </div>
-              <div class="game-field">
-                <div class="game-side">
-                  <button class="card-games-button">1</button>
-                  <div class="play-card-group">
-                    <div class="play-card">
-                      <h3>Q</h3>
-                      <img src="../assets/icons/game-cards/picka.svg" alt="" />
-                    </div>
-                    <div class="play-card">
-                      <h3>Q</h3>
-                      <img src="../assets/icons/game-cards/picka.svg" alt="" />
-                    </div>
-                  </div>
+              <div class="crash-wrapper">
+                <div class="crash__graph">
+                  <canvas id="crashChart"></canvas>
                 </div>
-                <div class="game-side">
-                  <div class="play-card-group">
-                    <div class="play-card">
-                      <h3>Q</h3>
-                      <img src="../assets/icons/game-cards/picka.svg" alt="" />
-                    </div>
-                    <div class="play-card">
-                      <h3>Q</h3>
-                      <img src="../assets/icons/game-cards/picka.svg" alt="" />
-                    </div>
-                  </div>
-                  <button class="card-games-button">1</button>
+                <div class="crash__timer">
+                  <span id="crashTimer">15</span>
                 </div>
-              </div>
-              <div class="game-title">
-                <img src="../assets/images/cards-title-block.svg" alt="" />
-                <h2>TIE PAYS 8 TO 1</h2>
-              </div>
-              <div class="game-bet">
-                <div class="bet-variant">
-                  <h3>Игрок</h3>
-                  <p>
-                    $0.00<span
-                      ><img
-                        width="20"
-                        src="../assets/icons/trx_icon.svg"
-                        alt=""
-                    /></span>
-                  </p>
+                <div class="multipliesDisplay">
+                  <span id="multiplierDisplay"></span>
                 </div>
-                <div class="bet-variant">
-                  <h3>Ничья</h3>
-                  <p>
-                    $0.00<span
-                      ><img
-                        width="20"
-                        src="../assets/icons/trx_icon.svg"
-                        alt=""
-                    /></span>
-                  </p>
-                </div>
-                <div class="bet-variant">
-                  <h3>Банкир</h3>
-                  <p>
-                    $0.00<span
-                      ><img
-                        width="20"
-                        src="../assets/icons/trx_icon.svg"
-                        alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-              <div class="game-rollback-btns">
-                <button>
-                  <svg fill="#b1bad3" viewBox="0 0 64 64" class="svg-icon">
-                    <path
-                      d="M37.973 11.947H16.24l5.84-5.84L15.973 0 .053 15.92l15.92 15.92 6.107-6.107-5.76-5.76h21.653C47.92 19.973 56 28.053 56 38c0 9.947-8.08 18.027-18.027 18.027h-21.76v8h21.76C52.347 64.027 64 52.373 64 38c0-14.373-11.653-26.027-26.027-26.027v-.026Z"
-                    ></path></svg
-                  >Отменить
-                </button>
-                <button>
-                  Очистить<svg fill="#fff" viewBox="0 0 64 64" class="svg-icon">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M31.943 13.08c-9.37 0-17.128 6.904-18.476 16.004l4.798-.002-9.146 12.96-9.12-12.96h5.334l.012-.124C6.889 15.536 18.291 5.112 32.127 5.112a26.823 26.823 0 0 1 17.5 6.452l-5.334 6.186.02.018a18.584 18.584 0 0 0-12.37-4.688Zm22.937 8.752L64 34.792h-5.174l-.01.12C57.332 48.398 45.902 58.888 32.02 58.888a26.826 26.826 0 0 1-17.646-6.576l5.334-6.186a18.597 18.597 0 0 0 12.47 4.776c9.406 0 17.188-6.96 18.49-16.11h-4.934l9.146-12.96ZM19.708 46.126l-.016-.014.016.014Z"
-                    ></path>
-                  </svg>
-                </button>
               </div>
             </div>
           </div>
@@ -1433,8 +1393,14 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../scripts/sliders.js"></script>
+    <script>
+      $("#dice-range").ionRangeSlider({
+        min: 0,
+        max: 100,
+        grid: true,
+      });
+    </script>
+    <script src="../crash.js"></script>
     <script src="../script.js"></script>
   </body>
 </html>
