@@ -165,22 +165,17 @@ $(document).ready(function () {
   });
 });
 
-const menuItems = document.querySelectorAll(".selectable-menu-item");
+const menuItems = document.querySelectorAll(".vip-modal .selectable-menu-item");
 const vipTabs = document.querySelectorAll(".vip-tabs");
 
-// Add event listeners to the menu items
 menuItems.forEach((menuItem, index) => {
   menuItem.addEventListener("click", () => {
-    // Remove the active class from all menu items
     menuItems.forEach((item) => item.classList.remove("active"));
 
-    // Add the active class to the clicked menu item
     menuItem.classList.add("active");
 
-    // Hide all tabs
     vipTabs.forEach((tab) => tab.classList.remove("active"));
 
-    // Show the corresponding tab
     vipTabs[index].classList.add("active");
   });
 });
@@ -276,35 +271,51 @@ $("#wallet-btn").click((e) => {
   e.preventDefault();
   showPopup(".wallet-modal");
 });
+$("#vip-btn").click((e) => {
+  e.preventDefault();
+  showPopup(".vip-modal");
+});
+$(".wallet-modal-title span").click((e) => {
+  e.preventDefault();
+  $(".popup").fadeOut();
+  showPopup(".wallet-modal");
+});
 
 $("#deposite-btn").click((e) => {
   e.preventDefault();
-  $(".modal-layout").fadeOut();
   $(".popup").fadeOut();
   showPopup(".deposite-modal");
 });
 
 $("#withdraw-btn").click((e) => {
   e.preventDefault();
-  $(".modal-layout").fadeOut();
   $(".popup").fadeOut();
   showPopup(".withdraw-modal");
+});
+$("#register-to-login").click((e) => {
+  e.preventDefault();
+  $(".popup").fadeOut();
+  showPopup(".login-modal");
+});
+$("#login-to-register").click((e) => {
+  e.preventDefault();
+  $(".popup").fadeOut();
+  showPopup(".register-modal");
+});
+$("#forgive-password-btn").click((e) => {
+  e.preventDefault();
+  $(".popup").fadeOut();
+  showPopup(".recover-modal");
 });
 
 $("#transfer-btn").click((e) => {
   e.preventDefault();
-  $(".modal-layout").fadeOut();
   $(".popup").fadeOut();
   showPopup(".transfer-modal");
 });
+
 $(".mobile-menu-btn").click((e) => {
   $(".menu-opened").fadeToggle();
-});
-$("#deposite-btn").click((e) => {
-  e.preventDefault();
-  $(".modal-layout").fadeOut();
-  $(".popup").fadeOut();
-  showPopup(".deposite-modal");
 });
 const dropDownHeaders = document.querySelectorAll(".drop-down-header");
 dropDownHeaders.forEach((header) => {

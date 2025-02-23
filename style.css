@@ -244,7 +244,7 @@ input[type="number"] {
   }
   input {
     width: 100%;
-    height: 67px;
+    height: 55px;
     border-radius: 10px;
     background: #212121;
     color: #ffffff;
@@ -267,7 +267,7 @@ input[type="number"] {
   background: #212121;
   cursor: pointer;
   width: 100%;
-  height: 67px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1133,7 +1133,8 @@ input[type="number"] {
   gap: 9.17px;
   position: absolute;
   bottom: 45px;
-  left: 273px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .hole {
@@ -1786,7 +1787,7 @@ input[type="number"] {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: block;
+  display: none;
 }
 
 .modal-title {
@@ -1888,11 +1889,15 @@ input[type="number"] {
   h3 {
     color: #ffffff;
     font-family: stolzlMedium, sans-serif;
-    font-size: 1.5rem;
+    font-size: 20px;
     line-height: 29px;
   }
+  a {
+    cursor: pointer;
+  }
 }
-.login-modal {
+.login-modal,
+.recover-modal {
   position: relative;
   width: 588px;
   border-radius: 5px;
@@ -1906,8 +1911,8 @@ input[type="number"] {
   h3 {
     color: #ffffff;
     font-family: stolzlMedium, sans-serif;
-    font-size: 1.5rem;
-    line-height: 29px;
+    font-size: 20px;
+    font-weight: 500;
   }
 }
 .register-modal-title {
@@ -1915,10 +1920,20 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   svg {
     position: absolute;
     right: 20px;
     top: 20px;
+  }
+}
+.recover-modal {
+  .register-modal-title {
+    justify-content: flex-start;
   }
 }
 .input-form {
@@ -1944,10 +1959,10 @@ input[type="number"] {
 }
 .confirm-btn {
   width: 100%;
-  height: 69px;
+  height: 55px;
   background: #b4080b;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 16px;
   line-height: 24px;
   margin-top: 25px;
   border-radius: 5px;
@@ -2477,17 +2492,17 @@ input[type="number"] {
   h3 {
     color: #ffffff;
     font-family: stolzlBold, sans-serif;
-    font-size: 8rem;
+    font-size: 110px;
     font-weight: 700;
     line-height: 154px;
-    margin-top: 126px;
+    margin-top: 30px;
     text-align: center;
   }
 }
 .variant-title {
   color: #434343;
   font-family: stolzlMedium, sans-serif;
-  font-size: 2rem;
+  font-size: 30px;
   line-height: 38px;
   text-align: center;
 }
@@ -2502,13 +2517,13 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    height: 90px;
+    height: 70px;
     width: 250px;
     gap: 10px;
     color: #ffffff;
     background: #212121;
     font-family: stolzlMedium, sans-serif;
-    font-size: 1.5rem;
+    font-size: 20px;
     line-height: 29px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -2528,9 +2543,9 @@ input[type="number"] {
 .game-result {
   text-align: center;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 20px;
   line-height: 29px;
-  padding: 30px 0;
+  padding: 21px 0;
   background: #b4080b;
   width: 510px;
   border-radius: 5px;
@@ -2856,10 +2871,15 @@ input[type="number"] {
   font-family: stolzlRegular, sans-serif;
   justify-content: space-between;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 18px;
   line-height: 29px;
   span {
     color: #434343;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #676767;
+    }
   }
 }
 .wallet-modal {
@@ -2885,7 +2905,7 @@ input[type="number"] {
     h3 {
       color: rgb(255, 255, 255);
       font-family: stolzlRegular, sans-serif;
-      font-size: 2rem;
+      font-size: 24px;
       line-height: 38px;
       span {
         font-family: stolzlBook, sans-serif;
@@ -2911,10 +2931,11 @@ input[type="number"] {
   }
   .left-side {
     display: flex;
+    align-items: center;
     gap: 5px;
     h3 {
       color: #ffffff;
-      font-size: 1.25rem;
+      font-size: 16px;
       line-height: 24px;
     }
     p {
@@ -2947,10 +2968,9 @@ input[type="number"] {
       cursor: pointer;
       width: 100%;
       color: #ffffff;
-      font-size: 1.25rem;
+      font-size: 16px;
       line-height: 24px;
-      padding-top: 19px;
-      padding-bottom: 18px;
+      padding: 13px 0;
       border-radius: 5px;
       background: #b4080b;
       transition: background 0.3s ease-in-out;
@@ -2962,12 +2982,11 @@ input[type="number"] {
   .exchange-btn {
     cursor: pointer;
     width: 100%;
-    padding-top: 19px;
-    padding-bottom: 18px;
+    padding: 13px 0;
     border-radius: 5px;
     background: #222222;
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: 16px;
     line-height: 24px;
     transition: background 0.3s ease-in-out;
     &:hover {
@@ -3513,6 +3532,7 @@ input[type="number"] {
   font-weight: 600;
   line-height: 19px;
   cursor: pointer;
+  margin-right: -175px;
   &.green {
     background: #1fff20;
   }
@@ -3549,6 +3569,12 @@ input[type="number"] {
   .container {
     max-width: 920px;
   }
+  .roullete-game {
+    .roulete-fields {
+      grid-template-columns: repeat(13, 35px);
+      grid-template-rows: repeat(3, 35px);
+    }
+  }
   .mines-game-wrapper {
     grid-template-columns: repeat(5, 70px);
   }
@@ -3562,6 +3588,31 @@ input[type="number"] {
 @media (max-width: 1180px) {
   body {
     font-size: 12px;
+  }
+  .nvuti-game {
+    padding: 0 30px;
+    h3 {
+      font-size: 4rem;
+    }
+  }
+  .variant-title {
+    font-size: 20px;
+  }
+  .game-variants {
+    flex-direction: column;
+    width: 100%;
+    div {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .game-result {
+    width: 100%;
   }
   .mobile-menu {
     display: flex;
@@ -3746,7 +3797,8 @@ input[type="number"] {
   .deposite-modal,
   .transfer-modal,
   .withdraw-modal,
-  .tournament-modal {
+  .tournament-modal,
+  .recover-modal {
     width: 90%;
   }
   .game-variants {
@@ -4034,7 +4086,7 @@ input[type="number"] {
 
     .table-row {
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: space-between;
       gap: 20px;
     }
   }

@@ -120,6 +120,35 @@
   align-items: center;
   gap: 128px;
 }
+@media (max-width: 1480px) {
+  .roullete {
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .roullete-game {
+    .roulete-fields {
+      grid-template-columns: repeat(13, 35px);
+      grid-template-rows: repeat(3, 35px);
+      gap: 4px;
+      .game-cell {
+        font-size: 16px;
+      }
+    }
+  }
+  .roulete-fields-right {
+    span {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+    }
+  }
+  .roullete-footer {
+    .roullete-footer-item {
+      font-size: 16px;
+    }
+    grid-template-columns: repeat(12, 35px);
+  }
+}
 
 @media (max-width: 1180px) {
   .roullete {

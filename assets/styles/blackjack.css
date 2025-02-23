@@ -52,7 +52,8 @@
     }
   }
   .blackjack-game {
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 20px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -120,7 +121,7 @@
   .blackjack {
     & .blackjack-game {
       & .game-title-wrapper {
-        margin-top: 0;
+        margin-top: 30px;
         margin-bottom: 10px;
         & .game-title {
           h2 {

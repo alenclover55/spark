@@ -8,15 +8,15 @@
   .game-mult {
     color: #ffffff;
     font-family: stolzlRegular, sans-serif;
-    font-size: 128px;
+    font-size: 60px;
     line-height: 154px;
     text-align: center;
-    margin-top: 209px;
-    margin-bottom: 162px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     span {
       color: #ffffff;
       font-family: stolzlRegular, sans-serif;
-      font-size: 64px;
+      font-size: 50px;
       line-height: 77px;
     }
   }
@@ -61,18 +61,18 @@
 }
 @media (max-width: 1680px) {
   .limbo-game {
-    max-width: 620px;
+    max-width: 100%;
   }
 }
 @media (max-width: 1480px) {
   .limbo-game {
-    max-width: 420px;
+    max-width: 620px;
   }
 }
 @media (max-width: 1180px) {
   .limbo-game {
     padding: 15px;
-    max-width: 100%;
+    max-width: 420px;
     .game-mult {
       font-size: 64px;
       margin: 50px 0;

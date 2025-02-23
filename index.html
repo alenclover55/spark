@@ -19,6 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./assets/fonts/fonts.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tabs.css" />
   </head>
   <body>
     <header class="header">
@@ -263,7 +264,7 @@
                 </svg>
                 Кошелек
               </a>
-              <a class="profile-menu-item" href="./pages/vip.html">
+              <a id="vip-btn" class="profile-menu-item" href="./pages/vip.html">
                 <svg
                   width="25.000000"
                   height="24.000000"
@@ -2955,8 +2956,8 @@
               <div class="user-wallet-list-item">
                 <div class="left-side">
                   <img
-                    width="35"
-                    height="35"
+                    width="18"
+                    height="18"
                     src="../assets/icons/trx_icon.svg"
                     alt=""
                   />
@@ -2973,8 +2974,8 @@
               <div class="user-wallet-list-item">
                 <div class="left-side">
                   <img
-                    width="35"
-                    height="35"
+                    width="18"
+                    height="18"
                     src="../assets/icons/trx_icon.svg"
                     alt=""
                   />
@@ -2991,8 +2992,8 @@
               <div class="user-wallet-list-item">
                 <div class="left-side">
                   <img
-                    width="35"
-                    height="35"
+                    width="18"
+                    height="18"
                     src="../assets/icons/trx_icon.svg"
                     alt=""
                   />
@@ -3097,8 +3098,8 @@
             <button class="selectable-menu-item">Буст</button>
             <button class="selectable-menu-item">Рейкбейк</button>
           </div>
-          <div class="vip-tabs tab1">
-            <div class="progress-card-wrapper">
+          <div class="vip-tabs tab1 active">
+            <div class="progress-border">
               <div class="progress-card">
                 <h3 class="progress-card-title">Привет, Username!</h3>
                 <div>
@@ -3114,12 +3115,12 @@
                 </div>
                 <div class="status-wrapper">
                   <div class="bronze-status">
-                    <img src="../assets/icons/bronze_cristal.svg" alt="" />
+                    <img src="./assets/icons/bronze_cristal.svg" alt="" />
                     <span>Бронза</span>
                   </div>
                   <img src="" alt="" />
                   <div class="silver-status">
-                    <img src="../assets/icons/silver_cristal.svg" alt="" />
+                    <img src="./assets/icons/silver_cristal.svg" alt="" />
                     <span>Серебро</span>
                   </div>
                 </div>
@@ -3203,7 +3204,7 @@
               Чем больше вы играете, тем выше бонус.
             </p>
           </div>
-          <div class="vip-tabs tab3 active">
+          <div class="vip-tabs tab3">
             <h4 class="reikbeik">Рейкбейк</h4>
             <div class="crypto-list">
               <div class="crypto-list-item">
@@ -3449,7 +3450,7 @@
             </a>
           </div>
           <p class="register-question">
-            У вас уже есть учетная запись?<a href="">Войти</a>
+            У вас уже есть учетная запись?<a id="register-to-login">Войти</a>
           </p>
         </div>
         <div class="popup login-modal">
@@ -3563,10 +3564,919 @@
               </svg>
             </a>
           </div>
-          <a class="remember-password-link" href="/">Забыли пароль?</a>
+          <a class="remember-password-link" id="forgive-password-btn"
+            >Забыли пароль?</a
+          >
           <p class="register-question">
-            У вас еще нет аккаунта?<a href="/">Зарегистрировать аккаунт</a>
+            У вас еще нет аккаунта?<a id="login-to-register"
+              >Зарегистрировать аккаунт</a
+            >
           </p>
+        </div>
+        <div class="popup recover-modal">
+          <div class="register-modal-title">
+            <div>
+              <img src="./assets/icons/carbon_password.svg" alt="" />
+              <h3>Восстановление пароля</h3>
+            </div>
+            <span class="close-btn">
+              <svg
+                width="15.012268"
+                height="15.012207"
+                viewBox="0 0 15.0123 15.0122"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="Vector 18"
+                  d="M1.5 1.5L13.5 13.5"
+                  stroke="#434343"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 19"
+                  d="M13.5 1.5L1.5 13.5"
+                  stroke="#434343"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linecap="round"
+                /></svg
+            ></span>
+          </div>
+          <div>
+            <div class="input-form">
+              <label>Электронная почта</label>
+              <input type="text" />
+            </div>
+            <button class="confirm-btn">Отправить код</button>
+          </div>
+        </div>
+        <div class="tournament-modal">
+          <div class="modal-title-wrapper">
+            <div class="modal-title">
+              <svg
+                width="25.000000"
+                height="24.000000"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <clipPath id="clip28_15519">
+                    <rect
+                      id="Tournaments"
+                      rx="0.000000"
+                      width="24.000000"
+                      height="23.000000"
+                      transform="translate(0.500000 0.500000)"
+                      fill="white"
+                      fill-opacity="0"
+                    />
+                  </clipPath>
+                </defs>
+                <rect
+                  id="Tournaments"
+                  rx="0.000000"
+                  width="24.000000"
+                  height="23.000000"
+                  transform="translate(0.500000 0.500000)"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <g clip-path="url(#clip28_15519)">
+                  <path
+                    id="Vector"
+                    d="M21.96 4.58C21.69 4.34 21.38 4.16 21.04 4.04C20.7 3.93 20.33 3.87 19.97 3.89L18.49 3.89C18.33 3.44 18.06 3.04 17.69 2.73C17.14 2.25 16.42 2.01 15.68 2.04L9.35 2.04C8.97 2.01 8.59 2.06 8.24 2.18C7.88 2.3 7.55 2.49 7.27 2.73C6.91 3.04 6.64 3.44 6.49 3.89L5.03 3.89C4.66 3.87 4.29 3.92 3.95 4.04C3.6 4.16 3.28 4.34 3.01 4.58C2.73 4.82 2.51 5.12 2.34 5.45C2.18 5.77 2.09 6.13 2.08 6.49C2.09 7.78 2.45 9.05 3.12 10.17C3.79 11.32 4.73 12.3 5.87 13.04L6.75 13.61L7.42 14C7.97 14.82 8.71 15.51 9.59 16L9.59 17.76L9.18 17.76C8.44 17.76 7.72 18.04 7.2 18.55C6.67 19.06 6.38 19.75 6.38 20.46L6.38 20.79C6.38 20.95 6.41 21.12 6.47 21.27C6.54 21.42 6.63 21.56 6.75 21.67C6.99 21.9 7.32 22.03 7.67 22.03L17.32 22.03C17.58 22.04 17.83 21.96 18.04 21.83C18.26 21.69 18.42 21.5 18.52 21.27C18.58 21.12 18.61 20.96 18.61 20.79L18.61 20.46C18.61 19.75 18.32 19.06 17.79 18.55C17.27 18.05 16.55 17.76 15.81 17.76L15.4 17.76L15.4 15.99C16.28 15.5 17.03 14.81 17.58 13.99L18.27 13.59L19.11 13.04C20.25 12.3 21.2 11.32 21.87 10.16C22.54 9.03 22.9 7.75 22.91 6.44C22.86 5.73 22.51 5.06 21.96 4.58ZM4.48 9.45C3.96 8.57 3.69 7.57 3.68 6.55C3.69 6.31 3.78 6.08 3.94 5.89C4.09 5.69 4.3 5.55 4.54 5.47C4.69 5.42 4.86 5.4 5.03 5.41L6.39 5.41L6.39 10.75C6.4 11.04 6.42 11.32 6.46 11.6C5.65 11.03 4.97 10.3 4.48 9.45ZM20.53 9.45C20.03 10.29 19.36 11.02 18.55 11.61C18.59 11.32 18.61 11.03 18.62 10.73L18.62 5.41L20.01 5.41C20.18 5.4 20.34 5.42 20.5 5.47C20.66 5.53 20.8 5.61 20.92 5.72C21.15 5.92 21.3 6.2 21.33 6.5C21.33 7.53 21.05 8.55 20.53 9.45Z"
+                    fill="#434343"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                  <path
+                    id="Star 1"
+                    d="M12.5 4L11.56 6.76L8.53 6.76L10.98 8.47L10.05 11.23L12.5 9.52L14.94 11.23L14.01 8.47L16.46 6.76L13.43 6.76L12.5 4Z"
+                    fill="#191919"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </g>
+              </svg>
+              <h3>Турнир на 100.000₽ - 24 часа</h3>
+            </div>
+            <svg
+              class="close-btn"
+              width="15.012268"
+              height="15.012207"
+              viewBox="0 0 15.0123 15.0122"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="Vector 18"
+                d="M1.5 1.5L13.5 13.5"
+                stroke="#434343"
+                stroke-opacity="1.000000"
+                stroke-width="3.000000"
+                stroke-linecap="round"
+              />
+              <path
+                id="Vector 19"
+                d="M13.5 1.5L1.5 13.5"
+                stroke="#434343"
+                stroke-opacity="1.000000"
+                stroke-width="3.000000"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="tournament-table">
+            <div class="tournament-table-row">
+              <div class="row-left">
+                <p>1th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+            <div class="tournament-table-row">
+              <div class="row-left">
+                <p>1th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+            <div class="tournament-table-row">
+              <div class="row-left">
+                <p>1th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+            <div class="tournament-table-row">
+              <div class="row-left">
+                <p>1th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+            <div class="tournament-table-row">
+              <div class="row-left">
+                <p>1th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+            <div class="tournament-table-row user-result">
+              <div class="row-left">
+                <p>35555th</p>
+                <p>Username</p>
+              </div>
+              <div class="row-right">
+                <p>
+                  <svg
+                    width="18.500000"
+                    height="18.500000"
+                    viewBox="0 0 18.5 18.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <mask
+                      id="mask341_5679"
+                      mask-type="alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1.000000"
+                      y="1.000000"
+                      width="16.500000"
+                      height="16.500000"
+                    >
+                      <path
+                        id="Vector"
+                        d="M16.12 1L2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                      <path
+                        id="Vector"
+                        d="M2.37 1C2.01 1 1.66 1.14 1.4 1.4C1.14 1.66 1 2.01 1 2.37L1 16.12C1 16.48 1.14 16.83 1.4 17.09C1.66 17.35 2.01 17.5 2.37 17.5L16.12 17.5C16.48 17.5 16.83 17.35 17.09 17.09C17.35 16.83 17.5 16.48 17.5 16.12L17.5 2.37C17.5 2.01 17.35 1.66 17.09 1.4C16.83 1.14 16.48 1 16.12 1L2.37 1Z"
+                        stroke="#FFFFFF"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector"
+                        d="M7.87 12.45L10.16 14.29L13.83 9.7M4.66 5.12L13.83 5.12M4.66 8.79L8.33 8.79"
+                        stroke="#2C2C2C"
+                        stroke-opacity="1.000000"
+                        stroke-width="2.000000"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                    </mask>
+                    <g mask="url(#mask341_5679)">
+                      <path
+                        id="Vector"
+                        d="M-1.75 -1.75L20.25 -1.75L20.25 20.25L-1.75 20.25L-1.75 -1.75Z"
+                        fill="#676767"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </g>
+                  </svg>
+                  $1.981.555.1
+                </p>
+                <p>
+                  <svg
+                    width="19.187164"
+                    height="22.000366"
+                    viewBox="0 0 19.1872 22.0004"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Rectangle 48"
+                      d="M1.06 7.33L7.52 7.33C8.08 7.33 8.52 7.78 8.52 8.33L8.52 22L6.06 22C3.3 22 1.06 19.76 1.06 17L1.06 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Rectangle 49"
+                      d="M18.12 7.33L11.65 7.33C11.1 7.33 10.65 7.78 10.65 8.33L10.65 22L13.12 22C15.88 22 18.12 19.76 18.12 17L18.12 7.33Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      id="Rectangle 50"
+                      x="4.263672"
+                      y="4.190430"
+                      rx="1.000000"
+                      width="10.659579"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 51"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <rect
+                      id="Rectangle 52"
+                      x="10.659424"
+                      y="7.333008"
+                      rx="1.000000"
+                      width="8.527665"
+                      height="2.095344"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                    />
+                    <path
+                      id="Polygon 1"
+                      d="M6.34 2.86L5.97 4.83C5.83 5.59 6.53 6.2 7.25 5.94L9.03 5.29C9.74 5.03 9.95 4.09 9.4 3.58L7.98 2.26C7.42 1.73 6.48 2.07 6.34 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Polygon 2"
+                      d="M12.84 2.86L13.2 4.83C13.35 5.59 12.64 6.2 11.93 5.94L10.15 5.29C9.43 5.03 9.23 4.09 9.78 3.58L11.19 2.26C11.76 1.73 12.69 2.07 12.84 2.86Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  $25.000
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
