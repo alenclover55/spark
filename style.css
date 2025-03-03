@@ -545,7 +545,7 @@ input[type="number"] {
 }
 .crash-game {
   padding: 0 25px;
-  padding-top: 50px;
+  padding-top: 30px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -566,7 +566,7 @@ input[type="number"] {
     gap: 10px;
     p {
       color: #ffffff;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
     }
   }
@@ -679,12 +679,12 @@ input[type="number"] {
         p {
           &:first-child {
             color: #434343;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 19px;
           }
           &:last-child {
             color: #ffffff;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 19px;
 
             span {
@@ -706,7 +706,7 @@ input[type="number"] {
         }
         p {
           color: #ffffff;
-          font-size: 16px;
+          font-size: 14px;
           line-height: 19px;
         }
       }
@@ -2446,6 +2446,7 @@ input[type="number"] {
   }
 }
 .game-confirm {
+  margin-top: 10px;
   width: 100%;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -2453,7 +2454,6 @@ input[type="number"] {
   font-size: 1rem;
   line-height: 24px;
   border-radius: 5px;
-  margin-top: 10px;
   background: rgb(180, 8, 11);
   cursor: pointer;
   transition: background 0.3s ease-in-out;
