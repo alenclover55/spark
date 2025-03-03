@@ -109,7 +109,10 @@ const coinsSlider = new Swiper(".coin-tracker", {
   breakpoints: {
     1180: {
       slidesPerView: "auto",
-      spaceBetween: 11,
+      spaceBetween: 10,
+    },
+    0: {
+      slidesPerView: "auto",
     },
   },
 });

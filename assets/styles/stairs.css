@@ -2,11 +2,13 @@
   width: 100%;
   border-radius: 0px 5px 5px 0px;
   background: #121212;
-  padding: 40px 0;
-  display: flex;
   padding: 20px;
-  flex-direction: column;
-  gap: 25px;
+  .stairs-game-wrapper {
+    scale: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
   .stairs-row {
     display: flex;
     align-items: center;
@@ -18,6 +20,9 @@
     height: 26px;
     max-width: 42.14px;
     width: 100%;
+    &.hidden {
+      background: transparent;
+    }
   }
 }
 @media (max-width: 900px) {
@@ -25,10 +30,14 @@
     width: 100%;
     border-radius: 0px 5px 5px 0px;
     background: #121212;
-    padding: 40px 0;
     padding: 20px;
-    justify-content: center;
     gap: 10px 5px;
+    .stairs-game-wrapper {
+      justify-content: center;
+      scale: 0.95;
+      width: 100%;
+      padding: 0;
+    }
     .stair {
       border-radius: 5px;
       background: #191919;

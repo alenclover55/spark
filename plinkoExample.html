@@ -1,213 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plinko Game</title>
     <style>
-      body {
-        margin: 0;
-        overflow: hidden;
+      /* Ваши стили здесь */
+      .btn-disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+      #plinkoContainer {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+        background: #f0f0f0;
+      }
+      .pin {
+        position: absolute;
+        background: #2052f7;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .ball {
+        position: absolute;
+        background: #ffd700;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .bucket {
+        position: absolute;
+        background: #ccc;
+        border-radius: 5px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-      }
-      canvas {
-        background-color: #fff;
-        border: 2px solid #000;
-      }
-      button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
-      .score {
-        margin-top: 10px;
-        font-size: 20px;
+        font-size: 12px;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <canvas
-      id="plinkoCanvas"
-      width="800"
-      height="600"
-      style="background-color: #121212"
-    ></canvas>
-    <button id="startButton">Запустить шарик</button>
-    <div class="score">Очки: <span id="scoreValue">0</span></div>
+    <div class="content">
+      <div class="mines">
+        <div class="content-body">
+          <div class="container">
+            <div class="one">
+              <button id="startGame" class="btn-play">Начать игру</button>
+              <button id="autoBet" class="btn-play">Автоигра</button>
+              <input
+                id="betInput"
+                type="number"
+                value="1.00"
+                min="1"
+                max="1000000"
+              />
+              <div id="history"></div>
+            </div>
+            <div id="w_container">
+              <div id="plinkoContainer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
-      const canvas = document.getElementById("plinkoCanvas");
-      const ctx = canvas.getContext("2d");
-      const startButton = document.getElementById("startButton");
-      const scoreValue = document.getElementById("scoreValue");
+      document.addEventListener("DOMContentLoaded", function () {
+        const game = {
+          pins: 8,
+          difficulty: "medium",
+          multipliers: {
+            low: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            medium: [2, 4, 6, 8, 10, 12, 14, 16, 18],
+            high: [5, 10, 15, 20, 25, 30, 35, 40, 45],
+          },
+          history: [],
+          balls: 0,
+        };
 
-      // Настройки игры
-      const PIN_ROWS = 10; // Количество рядов пинов
-      const PIN_SPACING = 40; // Расстояние между пинами
-      const BALL_RADIUS = 10; // Радиус шарика
-      const GRAVITY = 0.5; // Гравитация
-      const FRICTION = 0.8; // Трение при столкновении
-      const HOLE_WIDTH = 70; // Ширина лунки
-      const HOLE_HEIGHT = 20; // Высота лунки
-      const HOLE_Y = canvas.height - 30; // Позиция лунок по Y
+        const plinkoContainer = document.getElementById("plinkoContainer");
+        const startGameButton = document.getElementById("startGame");
+        const autoBetButton = document.getElementById("autoBet");
+        const betInput = document.getElementById("betInput");
+        const historyContainer = document.getElementById("history");
 
-      // Лунки и их значения
-      const holes = [];
-      const holeValues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; // Значения для 10 лунок
-      for (let i = 0; i < 9; i++) {
-        const x = i * HOLE_WIDTH + 20; // Равномерное распределение лунок
-        holes.push({ x, y: HOLE_Y, value: holeValues[i] });
-      }
+        let autoBetInterval = null;
 
-      // Создание пинов
-      const pins = [];
-      for (let row = 0; row < PIN_ROWS; row++) {
-        for (let col = 0; col <= row; col++) {
-          const x =
-            canvas.width / 2 - (row * PIN_SPACING) / 2 + col * PIN_SPACING;
-          const y = 100 + row * PIN_SPACING;
-          pins.push({ x, y });
-        }
-      }
+        // Инициализация игрового поля
+        createBoard(game.pins);
 
-      // Шарик
-      let ball = {
-        x: canvas.width / 2,
-        y: 100,
-        velocityX: 0,
-        velocityY: 0,
-        isFalling: false, // Флаг, указывающий, падает ли шарик
-      };
+        // Обработчики событий
+        startGameButton.addEventListener("click", playGame);
+        autoBetButton.addEventListener("click", switchAutoBet);
 
-      // Очки
-      let score = 0;
+        // Функция создания игрового поля
+        function createBoard(pins) {
+          plinkoContainer.innerHTML = "";
+          const size = pins + 2;
 
-      // Отрисовка пинов
-      function drawPins() {
-        ctx.fillStyle = "#FFFFFF";
-        pins.forEach((pin) => {
-          ctx.beginPath();
-          ctx.arc(pin.x, pin.y, 5, 0, Math.PI * 2);
-          ctx.fill();
-        });
-      }
+          for (let row = 2; row <= size; row++) {
+            for (let pos = 0; pos <= row; pos++) {
+              const left = 50 + (pos - row / 2) * (100 / (size + 2));
+              const top = (row + 1 - 2) * (100 / (size + 2));
+              const widthHeight = 100 / (row === size ? 3 : 5) / (size + 2);
 
-      // Отрисовка шарика
-      function drawBall() {
-        ctx.fillStyle = "#DB9A38";
-        ctx.beginPath();
-        ctx.arc(ball.x, ball.y, BALL_RADIUS, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // // Отрисовка лунок
-      // function drawHoles() {
-      //   ctx.fillStyle = "#00f"; // Синий цвет для лунок
-      //   holes.forEach((hole) => {
-      //     ctx.fillRect(hole.x, hole.y, HOLE_WIDTH, HOLE_HEIGHT); // Отрисовка прямоугольника
-      //     ctx.fillStyle = "#fff"; // Белый цвет для текста
-      //     ctx.font = "14px Arial";
-      //     ctx.textAlign = "center";
-      //     ctx.fillText(
-      //       hole.value,
-      //       hole.x + HOLE_WIDTH / 2,
-      //       hole.y + HOLE_HEIGHT / 2 + 5
-      //     ); // Текст с ценностью
-      //   });
-      // }
-
-      // Обновление позиции шарика
-      function updateBall() {
-        if (ball.isFalling) {
-          ball.velocityY += GRAVITY;
-          ball.x += ball.velocityX;
-          ball.y += ball.velocityY;
-
-          // Проверка столкновений с пинами
-          pins.forEach((pin) => {
-            const dx = ball.x - pin.x;
-            const dy = ball.y - pin.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < BALL_RADIUS + 5) {
-              // Отскок шарика
-              ball.velocityX = (Math.random() - 0.5) * 4;
-              ball.velocityY = -ball.velocityY * FRICTION;
+              if (row === size) {
+                if (pos !== 0 && pos !== size) {
+                  const bucket = document.createElement("div");
+                  bucket.className = `bucket bucket-${pos}`;
+                  bucket.style.top = `${top}%`;
+                  bucket.style.left = `${left}%`;
+                  bucket.style.width = `${widthHeight * 2.5}%`;
+                  bucket.style.height = `${widthHeight * 2.5}%`;
+                  bucket.textContent = getMultiplier(pos);
+                  plinkoContainer.appendChild(bucket);
+                }
+              } else {
+                const pin = document.createElement("div");
+                pin.className = "pin";
+                pin.style.top = `${top}%`;
+                pin.style.left = `${left}%`;
+                pin.style.width = `${widthHeight * 1.5}%`;
+                pin.style.height = `${widthHeight * 1.5}%`;
+                plinkoContainer.appendChild(pin);
+              }
             }
-          });
-
-          // Проверка попадания в лунку
-          holes.forEach((hole) => {
-            if (
-              ball.x + BALL_RADIUS > hole.x &&
-              ball.x - BALL_RADIUS < hole.x + HOLE_WIDTH &&
-              ball.y + BALL_RADIUS > hole.y &&
-              ball.y - BALL_RADIUS < hole.y + HOLE_HEIGHT
-            ) {
-              // Шарик попал в лунку
-              ball.isFalling = false;
-              score += hole.value; // Добавляем очки
-              scoreValue.textContent = score; // Обновляем отображение очков
-              resetBall(); // Сбрасываем шарик
-            }
-          });
-
-          // Проверка выхода за пределы экрана
-          if (ball.y + BALL_RADIUS > canvas.height) {
-            resetBall();
           }
         }
-      }
 
-      // Сброс шарика в начальное положение
-      function resetBall() {
-        ball.x = canvas.width / 2;
-        ball.y = 100;
-        ball.velocityX = 0;
-        ball.velocityY = 0;
-        ball.isFalling = false; // Останавливаем падение шарика
-      }
-
-      // Запуск шарика
-      function startBall() {
-        if (!ball.isFalling) {
-          ball.isFalling = true;
-          ball.velocityX = (Math.random() - 0.5) * 4; // Случайное начальное движение по X
-          ball.velocityY = 0; // Начальная скорость по Y
+        // Функция получения множителя
+        function getMultiplier(position) {
+          const multiplier = game.multipliers[game.difficulty][position - 1];
+          return multiplier >= 1000 ? `${multiplier / 1000}K` : multiplier;
         }
-      }
 
-      // Основной цикл игры
-      function gameLoop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Функция начала игры
+        function playGame() {
+          if (game.balls > 0) return; // Игра уже идет
+          const bet = parseFloat(betInput.value);
+          if (isNaN(bet)) return alert("Некорректная ставка");
 
-        drawPins(); // Отрисовка пинов
-        // drawHoles(); // Отрисовка лунок
-        drawBall(); // Отрисовка шарика
-        updateBall(); // Обновление позиции шарика
+          game.balls += 1;
+          const target = Math.floor(Math.random() * game.pins) + 1;
+          const result = bet * getMultiplier(target);
+          animateBall(target, result);
+        }
 
-        requestAnimationFrame(gameLoop);
-      }
+        // Функция анимации шарика
+        function animateBall(target, result) {
+          const ball = document.createElement("div");
+          ball.className = "ball";
+          ball.style.top = "0%";
+          ball.style.left = "50%";
+          ball.style.width = "20px";
+          ball.style.height = "20px";
+          plinkoContainer.appendChild(ball);
 
-      // Обработчик нажатия на кнопку
-      startButton.addEventListener("click", startBall);
+          let step = 0;
+          const totalSteps = game.pins + 2; // Общее количество шагов
+          const duration = 2000; // Общее время анимации в миллисекундах (2 секунды)
+          const stepDuration = duration / totalSteps; // Время для каждого шага
 
-      // Запуск игры
-      gameLoop();
+          const interval = setInterval(() => {
+            step += 1;
+            if (step > totalSteps) {
+              clearInterval(interval);
+              game.balls -= 1;
+              updateHistory(result);
+              ball.remove();
+              return;
+            }
+            const left = 50 + (Math.random() - 0.5) * 20; // Случайное смещение
+            ball.style.top = `${step * (100 / totalSteps)}%`;
+            ball.style.left = `${left}%`;
+          }, stepDuration);
+        }
+
+        // Функция обновления истории
+        function updateHistory(result) {
+          const historyItem = document.createElement("div");
+          historyItem.textContent = `Выигрыш: ${result.toFixed(2)}x`;
+          historyContainer.prepend(historyItem);
+          if (historyContainer.children.length > 15) {
+            historyContainer.lastChild.remove();
+          }
+        }
+
+        // Функция автоигры
+        function switchAutoBet() {
+          if (autoBetInterval) {
+            clearInterval(autoBetInterval);
+            autoBetInterval = null;
+            autoBetButton.textContent = "Автоигра";
+          } else {
+            autoBetInterval = setInterval(playGame, 3000); // Интервал между играми в авторежиме
+            autoBetButton.textContent = "Остановить";
+          }
+        }
+      });
     </script>
   </body>
 </html>

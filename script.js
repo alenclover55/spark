@@ -76,32 +76,32 @@ $(".menu-open-btn").click(() => {
   $(".sidebar").toggleClass("active");
 });
 
-$(document).ready(function () {
-  $(".currency-select-item").on("click", function () {
-    const currency = $(this).data("currency");
-    const imageSrc = $(this).data("image");
-    const value = $(this).find("p").text().trim();
+// $(document).ready(function () {
+//   $(".currency-select-item").on("click", function () {
+//     const currency = $(this).data("currency");
+//     const imageSrc = $(this).data("image");
+//     const value = $(this).find("p").text().trim();
 
-    $(".currency-field input").val(value);
+//     $(".currency-field input").val(value);
 
-    $(".currency-field .currency-icon").replaceWith(
-      `<img src="${imageSrc}" alt="${currency}" class="currency-icon" />`
-    );
+//     $(".currency-field .currency-icon").replaceWith(
+//       `<img src="${imageSrc}" alt="${currency}" class="currency-icon" />`
+//     );
 
-    $(".currency-select-list").hide();
-  });
+//     $(".currency-select-list").hide();
+//   });
 
-  $(".currency-field").on("click", function () {
-    $(".dropdown-icon").toggleClass("rotated-180");
-    $(".currency-select-list").fadeToggle();
-  });
+//   $(".currency-field").on("click", function () {
+//     $(".dropdown-icon").toggleClass("rotated-180");
+//     $(".currency-select-list").fadeToggle();
+//   });
 
-  $(document).on("click", function (e) {
-    if (!$(e.target).closest(".currency-field, .currency-select-list").length) {
-      $(".currency-select-list").hide();
-    }
-  });
-});
+//   $(document).on("click", function (e) {
+//     if (!$(e.target).closest(".currency-field, .currency-select-list").length) {
+//       $(".currency-select-list").hide();
+//     }
+//   });
+// });
 
 $(".profile-menu-btn").click(() => {
   $(".profile-menu-wrapper").fadeToggle();

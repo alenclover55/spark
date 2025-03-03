@@ -142,8 +142,34 @@
   .bacarat-game {
     padding: 100px 16 16px 16px;
   }
+  .bacarat {
+    .play-card {
+      width: 80px;
+      height: 120px;
+      h3 {
+        font-size: 32px;
+      }
+      img {
+        width: 22px;
+      }
+    }
+  }
 }
 @media (max-width: 1180px) {
+  .bacarat {
+    .play-card {
+      width: 67px;
+      height: 100px;
+    }
+    .game-side {
+      flex-direction: column;
+      align-items: center;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+        gap: 25px;
+      }
+    }
+  }
   .bacarat-game {
     .game-title {
       max-width: 280px;

@@ -43,7 +43,7 @@ input[type="number"] {
 }
 .logo {
   display: block;
-  height: 35px;
+  height: 42px;
 }
 .logo-mobile {
   display: none;
@@ -898,7 +898,7 @@ input[type="number"] {
 }
 
 .currency-wallet input {
-  width: 80px;
+  width: 50px;
   height: 20px;
   text-align: right;
   background: transparent;
@@ -911,8 +911,15 @@ input[type="number"] {
 .currency-field {
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  justify-content: center;
+  padding-right: 10px;
+  width: 110px;
   cursor: pointer;
+  span {
+    color: #ffffff;
+    font-size: 12px;
+    margin-right: 10px;
+  }
   input {
     cursor: pointer;
   }
@@ -2437,20 +2444,12 @@ input[type="number"] {
     &:hover {
       background: #434343;
     }
-    &.swiper-button-disabled {
-      background: #212121;
-      svg {
-        * {
-          stroke: #1a1a1a;
-        }
-      }
-    }
   }
 }
 .game-confirm {
   width: 100%;
-  padding-top: 17px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: #ffffff;
   font-size: 1rem;
   line-height: 24px;
@@ -2464,7 +2463,7 @@ input[type="number"] {
   }
 }
 .game-wrapper {
-  margin-top: 73px;
+  margin-top: 50px;
   display: flex;
 }
 #plinkoCanvas {
@@ -2557,16 +2556,16 @@ input[type="number"] {
   border-radius: 30px;
   gap: 5px;
   padding: 5px;
-  width: 280px;
   margin: 0 auto;
   background: #0e0e0e;
   .game-mode-btn {
-    height: 51px;
+    height: 40px;
     padding: 0 18px;
     border-radius: 30px;
-    color: #ffffff;
+    color: #fff;
     background: transparent;
-    font-size: 0.875rem;
+    font-family: stolzlRegular, sans-serif;
+    font-size: 14px;
     line-height: 17px;
     text-wrap: nowrap;
     cursor: pointer;
@@ -2594,25 +2593,25 @@ input[type="number"] {
     border: 2px solid #323232;
     border-radius: 5px;
     background: #141414;
-    padding: 3px;
+    padding: 2px;
 
     button {
       color: #fff;
       background: #323232;
       font-size: 12px;
-      line-height: 17px;
-      padding: 12px;
+      line-height: 16px;
+      padding: 10px;
       cursor: pointer;
     }
 
     .sub-label {
       border-radius: 5px;
       background: none;
-      padding: 12px;
+      padding: 10px;
       text-wrap: nowrap;
       color: #ffffff;
       font-size: 12px;
-      line-height: 17px;
+      line-height: 16px;
       text-align: center;
     }
 
@@ -2624,18 +2623,18 @@ input[type="number"] {
       input {
         width: 100%;
         height: 100%;
-        padding: 12px;
+        padding: 10px;
         border-radius: 5px;
         background: #262626;
         color: #fff;
-        font-size: 1rem;
+        font-size: 14px;
         line-height: 19px;
       }
 
       span {
         position: absolute;
         right: 6px;
-        top: 10px;
+        top: 8px;
         color: #676767;
         font-size: 18px;
         line-height: 24px;
@@ -3225,7 +3224,7 @@ input[type="number"] {
       border-radius: 5px;
       padding: 18px 15px;
       &:nth-child(2n - 1) {
-        background: rgb(20, 20, 20);
+        background: #141414;
       }
     }
     .currency-value {
@@ -3307,7 +3306,7 @@ input[type="number"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 60px 85px;
+    padding: 120px 60px 140px;
   }
   .coinflip-history {
     width: 100%;
@@ -4120,6 +4119,39 @@ input[type="number"] {
         }
         &:nth-child(5) {
           display: none;
+        }
+      }
+    }
+  }
+  .latest-games-table.mode-table {
+    overflow-x: scroll;
+    .table-header {
+      margin-top: 32px;
+      margin-bottom: 15px;
+    }
+    .table-header,
+    .table-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px;
+      width: 900px;
+      p {
+        color: #434343;
+        font-size: 1rem;
+        line-height: 19px;
+        justify-self: center;
+
+        &:nth-child(2) {
+          display: block;
+        }
+        &:nth-child(3) {
+          display: block;
+        }
+        &:nth-child(4) {
+          display: block;
+        }
+        &:nth-child(5) {
+          display: block;
         }
       }
     }

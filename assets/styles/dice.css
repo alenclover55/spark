@@ -33,7 +33,7 @@
   }
   .dice-range {
     background: #161616;
-    height: 34px;
+    height: 27px;
     padding: 9px 6px;
     border-radius: 19px;
     position: relative;
@@ -41,6 +41,12 @@
       position: absolute;
       top: -102px;
       z-index: 3;
+      width: 120px;
+      height: 120px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
       span {
         color: #00ff01;
         font-family: stolzlRegular, sans-serif;
@@ -65,18 +71,19 @@
     .irs--flat .irs-bar {
       background: #00e701 !important;
       border-radius: 19px;
-      height: 15px;
+      height: 8px;
     }
     .irs--flat .irs-line {
       background: #cc1c1c;
       border-radius: 19px;
-      height: 15px;
+      height: 8px;
     }
     .irs--flat .irs-handle {
       background: url("../icons/range-handler.svg");
-      width: 32px;
-      height: 32px;
-      top: 16px;
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      top: 14px;
       cursor: pointer;
     }
     .irs--flat .irs-handle > i:first-child {
@@ -102,7 +109,7 @@
     gap: 10px;
     border-radius: 5px;
     background: #1e1e1e;
-    margin-top: 216px;
+    margin-top: 142px;
     padding: 16px 18px 16px 18px;
     div {
       position: relative;
@@ -110,7 +117,7 @@
       p {
         color: #5b5b5b;
         font-family: stolzlRegular, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 19px;
         margin-bottom: 9px;
       }
@@ -119,7 +126,7 @@
       border-radius: 5px;
       background: #161616;
       width: 100%;
-      height: 49px;
+      height: 39px;
       color: #ffffff;
       padding: 0 10px;
       font-size: 14px;
@@ -144,6 +151,9 @@
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      img {
+        width: 30px;
+      }
       &:hover {
         background: #1a1a1a;
       }

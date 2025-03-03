@@ -52,6 +52,12 @@
     justify-content: center;
   }
 }
+.desktop-roullete-wrapper {
+  display: block;
+}
+.mobile-roullete-wrapper {
+  display: none;
+}
 .roullete-footer {
   display: grid;
   justify-content: center;
@@ -102,9 +108,8 @@
   }
 }
 .result-block {
-  display: inline-block;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 5px;
   background: #212121;
   color: rgb(255, 255, 255);
@@ -114,6 +119,9 @@
   align-items: center;
   justify-content: center;
   margin-left: 135px;
+  &.mobile {
+    display: none;
+  }
 }
 .roullete {
   display: flex;
@@ -131,7 +139,7 @@
       grid-template-rows: repeat(3, 35px);
       gap: 4px;
       .game-cell {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   }
@@ -139,12 +147,12 @@
     span {
       width: 35px;
       height: 35px;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .roullete-footer {
     .roullete-footer-item {
-      font-size: 16px;
+      font-size: 14px;
     }
     grid-template-columns: repeat(12, 35px);
   }
@@ -154,10 +162,25 @@
   .roullete {
     display: none;
   }
+  .roullete-game {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .result-block {
+    margin-left: 30px;
+    display: none;
+    &.mobile {
+      display: flex;
+    }
+  }
+  .desktop-roullete-wrapper {
+    display: none;
+  }
   .mobile-roullete-wrapper {
     display: flex;
     flex-direction: row-reverse;
-    gap: 20px;
+    gap: 4px;
     justify-content: center;
   }
   .roulete-fields-wrapper {
@@ -167,16 +190,16 @@
     flex-direction: row;
   }
   .roullete-footer {
-    grid-template-columns: repeat(2, 50px);
-    grid-template-rows: repeat(12, 50px);
-
+    grid-template-columns: repeat(2, 39.16px);
+    grid-template-rows: repeat(12, 29.38px);
+    margin-top: 32px;
     .roullete-footer-item {
       text-orientation: mixed;
       writing-mode: vertical-rl;
       height: auto;
       &:nth-child(1) {
         grid-column: span 1;
-        grid-row: span 4;
+        grid-row: span 2;
       }
       &:nth-child(2) {
         grid-column: span 1;
@@ -184,31 +207,34 @@
       }
       &:nth-child(3) {
         grid-column: span 1;
-        grid-row: span 4;
+        grid-row: span 2;
       }
       &:nth-child(4) {
-        grid-column: span 1;
-        grid-row: span 2;
-      }
-      &:nth-child(5) {
-        grid-column: span 1;
-        grid-row: span 2;
-      }
-      &:nth-child(6) {
         grid-column: span 1;
         grid-row: span 2;
         border: none;
         background: #fe3955;
       }
-      &:nth-child(7) {
+      &:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 4;
+      }
+      &:nth-child(6) {
         grid-column: span 1;
         grid-row: span 2;
         border: none;
         background: #475163;
       }
-      &:nth-child(8) {
+      &:nth-child(7) {
         grid-column: span 1;
         grid-row: span 2;
+
+        background: none;
+        border: 2px solid #434343;
+      }
+      &:nth-child(8) {
+        grid-column: span 1;
+        grid-row: span 4;
       }
       &:nth-child(9) {
         grid-column: span 1;
@@ -219,8 +245,8 @@
   .roullete-game {
     .roulete-fields {
       display: grid;
-      grid-template-columns: repeat(3, 50px);
-      grid-template-rows: repeat(13, 50px);
+      grid-template-columns: repeat(3, 39.16px);
+      grid-template-rows: repeat(13, 29.38px);
       .game-cell {
         &.spand3 {
           grid-row: span 1;
@@ -228,6 +254,16 @@
           background: #62ca5b;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .roulete-fields-right {
+    span {
+      width: 39.16px;
+      height: 29.38px;
+      font-size: 14px;
     }
   }
 }
