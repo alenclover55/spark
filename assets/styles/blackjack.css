@@ -51,7 +51,7 @@
     }
   }
   .blackjack-game {
-    padding-top: 100px;
+    padding-top: 30px;
     padding-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -61,11 +61,11 @@
     width: 100%;
     background: #121212;
     .game-title-wrapper {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       .game-title {
         position: relative;
-        min-width: 375px;
+        min-width: 300px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -81,10 +81,10 @@
           z-index: 2;
           color: #fff;
           font-family: stolzlMedium, sans-serif;
-          font-size: 15px;
+          font-size: 13px;
           line-height: 29px;
           text-align: center;
-          padding: 14px 0;
+          padding: 9px 0;
         }
       }
       p {
