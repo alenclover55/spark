@@ -842,7 +842,7 @@ input[type="number"] {
     color: #5b5b5b;
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   input {
     width: 100%;
@@ -1957,7 +1957,7 @@ input[type="number"] {
     border: 1px solid #262626;
     border-radius: 5px;
     background: #0e0e0e;
-    height: 48px;
+    height: 39px;
     padding-left: 20px;
     padding-right: 50px;
     color: #fff;
@@ -2039,7 +2039,7 @@ input[type="number"] {
 .show-password-btn {
   background: none;
   position: absolute;
-  top: 42px;
+  top: 37px;
   right: 13px;
   cursor: pointer;
   svg {
@@ -2287,13 +2287,13 @@ input[type="number"] {
     border-radius: 5px;
   }
   button {
-    min-width: 49px;
+    min-width: 40px;
     min-height: 40px;
     border-radius: 5px;
     background: transparent;
     color: #ffffff;
     font-family: Gilroy-Medium, sans-serif;
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 19px;
     cursor: pointer;
@@ -2350,6 +2350,7 @@ input[type="number"] {
       color: #ffffff;
       display: flex;
       align-items: center;
+      gap: 5px;
     }
   }
 }
@@ -3133,12 +3134,11 @@ input[type="number"] {
   .withdraw-btn {
     width: 379px;
     display: block;
-    padding-top: 22px;
-    padding-bottom: 23px;
+    padding: 15px 0;
     border-radius: 5px;
     background: #b4080b;
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: 16px;
     line-height: 24px;
     margin: 40px auto 25px;
     cursor: pointer;

@@ -30,7 +30,7 @@
     width: 100%;
     border-radius: 0px 5px 5px 0px;
     background: #121212;
-    padding: 20px;
+    padding: 0;
     gap: 10px 5px;
     .stairs-game-wrapper {
       justify-content: center;
