@@ -3498,7 +3498,7 @@ input[type="number"] {
 }
 .play-card {
   width: 96px;
-  height: 140px;
+  height: 154px;
   border-radius: 5px;
   background: #fff;
   padding-left: 11px;
@@ -3506,7 +3506,7 @@ input[type="number"] {
   h3 {
     color: #000;
     font-family: ProximaNova, sans-serif;
-    font-size: 48px;
+    font-size: 35.5px;
     line-height: 58px;
     letter-spacing: 15%;
     text-align: left;

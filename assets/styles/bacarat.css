@@ -159,7 +159,7 @@
   .bacarat {
     .play-card {
       width: 67px;
-      height: 100px;
+      height: 110px;
     }
     .game-side {
       flex-direction: column;
@@ -211,7 +211,7 @@
 
   .game-side {
     flex-direction: column;
-    gap: 25px !important;
+    gap: 10px !important;
     &:nth-child(2) {
       flex-direction: column-reverse;
     }
