@@ -2490,7 +2490,7 @@ input[type="number"] {
   h3 {
     color: #ffffff;
     font-family: stolzlBold, sans-serif;
-    font-size: 110px;
+    font-size: 90px;
     font-weight: 700;
     line-height: 154px;
     margin-top: 30px;
@@ -2500,7 +2500,7 @@ input[type="number"] {
 .variant-title {
   color: #434343;
   font-family: stolzlMedium, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 38px;
   text-align: center;
 }
@@ -2515,7 +2515,7 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    height: 70px;
+    height: 59px;
     width: 250px;
     gap: 10px;
     color: #ffffff;
@@ -2543,11 +2543,11 @@ input[type="number"] {
   color: #ffffff;
   font-size: 20px;
   line-height: 29px;
-  padding: 21px 0;
+  padding: 15px 0;
   background: #b4080b;
   width: 510px;
   border-radius: 5px;
-  margin: 50px auto 117px;
+  margin: 50px auto 50px;
 }
 .game-mode-wrapper {
   display: flex;
