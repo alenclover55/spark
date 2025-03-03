@@ -1058,7 +1058,7 @@ input[type="number"] {
 }
 .banner-card {
   width: 321px;
-  height: 312px;
+  height: 253px;
   display: flex;
   align-items: end;
   background-size: cover !important;
@@ -1302,7 +1302,6 @@ input[type="number"] {
   font-size: 18px;
   font-weight: 500;
   line-height: 38px;
-  margin-bottom: 30px;
   h2 {
     font-size: 18px;
   }
@@ -1353,7 +1352,7 @@ input[type="number"] {
 }
 
 .game-list {
-  padding: 35px 0;
+  padding: 15px 0;
 }
 
 .game-list-header {
@@ -1387,7 +1386,7 @@ input[type="number"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 39px;
+  height: 35px;
   width: 49px;
   transition: 0.3s all ease-in-out;
   border: 1px solid #212121;
@@ -1506,14 +1505,14 @@ input[type="number"] {
 .tournament-card-btn {
   background: #9e0709;
   border-radius: 5px;
-  padding: 15px 20px;
+  padding: 12.5px 20px;
   line-height: 19px;
   color: #fff;
 }
 .profile-menu-btn {
   cursor: pointer;
   svg {
-    height: 40px;
+    height: 32px;
   }
 }
 .profile-menu {
@@ -2228,7 +2227,7 @@ input[type="number"] {
     h3 {
       color: #ffffff;
       font-family: stolzlMedium, sans-serif;
-      font-size: 1.25rem;
+      font-size: 16px;
       line-height: 24px;
     }
     .crypto-currency {
@@ -2361,7 +2360,7 @@ input[type="number"] {
   border: 2px solid #323232;
   border-radius: 5px;
   background: #141414;
-  height: 61px;
+  height: 57px;
   width: 100%;
   .coin-tracker {
     flex-grow: 1;
@@ -3310,12 +3309,12 @@ input[type="number"] {
   }
   .coinflip-history {
     width: 100%;
-    height: 110px;
+    height: 88px;
     border-radius: 0 5px 5px 0;
-    background: rgb(24, 24, 24);
+    background: #181818;
     display: flex;
     gap: 25px;
-    padding: 21px 25px 21px 25px;
+    padding: 17px 25px 17px 25px;
     img {
       width: 65px;
     }
@@ -3328,6 +3327,8 @@ input[type="number"] {
     justify-content: center;
     border: 2px solid #262626;
     border-radius: 5px;
+    width: 130px;
+    height: 113px;
     h3 {
       color: #434343;
       font-family: stolzlRegular, sans-serif;
@@ -3337,14 +3338,14 @@ input[type="number"] {
     }
     p {
       color: #434343;
-      font-size: 1rem;
+      font-size: 12px;
       line-height: 29px;
     }
   }
 }
 .coin {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -3465,16 +3466,21 @@ input[type="number"] {
 .top-game-cards {
   img {
     position: absolute;
-    top: -140px;
+    width: 96px;
+    top: -82px;
     right: 50px;
     z-index: 10;
     &:nth-child(2) {
-      top: -120px;
+      top: -78px;
       z-index: 9;
     }
     &:nth-child(3) {
-      top: -100px;
+      top: -75px;
       z-index: 8;
+    }
+    &:nth-child(4) {
+      top: -72px;
+      z-index: 7;
     }
   }
 }
@@ -3491,8 +3497,8 @@ input[type="number"] {
   }
 }
 .play-card {
-  width: 122px;
-  height: 165px;
+  width: 110px;
+  height: 160px;
   border-radius: 5px;
   background: #fff;
   padding-left: 11px;
@@ -3531,7 +3537,8 @@ input[type="number"] {
   font-weight: 600;
   line-height: 19px;
   cursor: pointer;
-  margin-right: -175px;
+  margin-right: -36px;
+  margin-bottom: 5px;
   &.green {
     background: #1fff20;
   }
@@ -3665,6 +3672,15 @@ input[type="number"] {
   .banner h2 {
     display: none;
   }
+  .top-game-cards {
+    img {
+      position: absolute;
+      width: 75px;
+      top: -82px;
+      right: 25px;
+      z-index: 10;
+    }
+  }
   .row-label {
     display: block;
     color: #676767;
@@ -3703,23 +3719,6 @@ input[type="number"] {
   }
   .tournament-card-descr {
     margin-bottom: 12px;
-  }
-  .top-game-cards {
-    img {
-      width: 120px;
-      position: absolute;
-      top: -140px;
-      right: 50px;
-      z-index: 10;
-      &:nth-child(2) {
-        top: -120px;
-        z-index: 9;
-      }
-      &:nth-child(3) {
-        top: -100px;
-        z-index: 8;
-      }
-    }
   }
   .footer-crypto-list {
     overflow-x: scroll;
@@ -4188,9 +4187,6 @@ input[type="number"] {
         font-weight: 500;
         line-height: unset;
       }
-      p {
-        font-size: 14px;
-      }
     }
     .coinflip-main {
       gap: 20px;
@@ -4235,9 +4231,6 @@ input[type="number"] {
     .table-row {
       flex-wrap: wrap;
     }
-  }
-  .list-game-title {
-    margin-bottom: 15px;
   }
   .tower,
   .nvuti,

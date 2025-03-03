@@ -7,7 +7,6 @@
     }
   }
   .blackjack-variant {
-    margin: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px 8px;
@@ -109,11 +108,11 @@
 
 @media (max-width: 900px) {
   .blackjack-game {
-    padding-top: 60px !important;
+    padding-top: 10px !important;
     padding-bottom: 30px;
   }
   .game-title {
-    min-width: 100% !important;
+    min-width: 230px !important;
     h2 {
       font-size: 16px;
     }
@@ -121,24 +120,26 @@
   .blackjack {
     & .blackjack-game {
       & .game-title-wrapper {
-        margin-top: 30px;
+        margin-top: 25px;
         margin-bottom: 10px;
         & .game-title {
           h2 {
-            font-size: 12px;
+            font-size: 10px;
             padding: 3px 0;
           }
         }
         p {
-          font-size: 20px;
-          margin-top: 3px;
+          font-size: 12px;
+          margin-top: -5px;
         }
       }
     }
   }
   .blackjack-cards {
     padding-right: 0;
-    margin: 20px 0;
+    &:nth-child(1) {
+      margin: 20px 0;
+    }
   }
   .blackjack {
     & .blackjack-variant {
