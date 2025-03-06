@@ -4,20 +4,21 @@
   background: #121212;
   padding: 20px;
   .stairs-game-wrapper {
-    scale: 0.9;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 26px;
+    max-width: 500px;
+    margin: 0 auto;
   }
   .stairs-row {
     display: flex;
     align-items: center;
-    gap: 2.75px;
+    gap: 1px;
   }
   .stair {
     border-radius: 5px;
     background: #191919;
-    height: 26px;
+    height: 15px;
     max-width: 42.14px;
     width: 100%;
     &.hidden {

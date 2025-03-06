@@ -20,7 +20,10 @@
     margin-top: 37px;
     margin-bottom: 42px;
     position: relative;
-    width: 550px;
+    width: 520px;
+    .wheel-inner {
+      width: 100%;
+    }
     .wheel-arrow {
       position: absolute;
       top: -20px;
