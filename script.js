@@ -261,6 +261,7 @@ $(document).ready(function () {
 function showPopup(selector) {
   $(".modal-layout").fadeIn();
   $(selector).fadeIn();
+  $(this).css("display", "flex");
 }
 
 $(".close-btn").click(() => {
@@ -270,6 +271,10 @@ $(".close-btn").click(() => {
 $("#wallet-btn").click((e) => {
   e.preventDefault();
   showPopup(".wallet-modal");
+});
+$(".statistic-open-btn").click((e) => {
+  e.preventDefault();
+  showPopup(".statistic-modal");
 });
 $("#vip-btn").click((e) => {
   e.preventDefault();
@@ -281,13 +286,13 @@ $(".wallet-modal-title span").click((e) => {
   showPopup(".wallet-modal");
 });
 
-$("#deposite-btn").click((e) => {
+$(".deposite-btn").click((e) => {
   e.preventDefault();
   $(".popup").fadeOut();
   showPopup(".deposite-modal");
 });
 
-$("#withdraw-btn").click((e) => {
+$(".withdraw-btn").click((e) => {
   e.preventDefault();
   $(".popup").fadeOut();
   showPopup(".withdraw-modal");

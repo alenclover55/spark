@@ -131,14 +131,13 @@
 .roullete {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 128px;
+  gap: 180px;
+  padding-left: 80px;
   margin-bottom: 20px;
 }
 @media (max-width: 1480px) {
   .roullete {
-    gap: 30px;
-    justify-content: center;
+    gap: 40px;
     align-items: start;
   }
   .roullete-game {
@@ -276,5 +275,17 @@
       height: 29.38px;
       font-size: 14px;
     }
+  }
+}
+
+.roullete-wheel {
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
