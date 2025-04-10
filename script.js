@@ -329,3 +329,15 @@ dropDownHeaders.forEach((header) => {
     dropDown.classList.toggle("active");
   });
 });
+$(document).ready(function () {
+  $(".game-variant-btn").click(function () {
+    $(this).toggleClass("active");
+
+    $(this)
+      .prev(".variant-label")
+      .toggleClass("active", !$(this).hasClass("active"));
+    $(this)
+      .next(".variant-label")
+      .toggleClass("active", $(this).hasClass("active"));
+  });
+});

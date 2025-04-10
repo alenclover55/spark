@@ -2,13 +2,38 @@
   width: 100%;
   border-radius: 0px 5px 5px 0px;
   background: #121212;
-  padding: 20px;
+  display: flex;
+  .stairs-coef-list {
+    max-width: 105px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #1a1a1a;
+  }
+  .stairs-coef-item {
+    border: 1px solid #323232;
+    border-radius: var(--border-radius-sm);
+    flex: auto;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #5b5b5b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+  }
   .stairs-game-wrapper {
     display: flex;
     flex-direction: column;
     gap: 26px;
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
+    padding: 20px;
   }
   .stairs-row {
     display: flex;
@@ -33,6 +58,30 @@
     background: #121212;
     padding: 0;
     gap: 10px 5px;
+    flex-direction: column-reverse;
+    .stairs-coef-list {
+      max-width: 100%;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+    }
+    .stairs-coef-item {
+      border: 1px solid #323232;
+      border-radius: var(--border-radius-sm);
+      flex: auto;
+      margin-bottom: 6px;
+      font-size: 12px;
+      line-height: 14px;
+      color: #5b5b5b;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 75px;
+      height: 40px;
+    }
     .stairs-game-wrapper {
       justify-content: center;
       scale: 0.95;

@@ -6,6 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/fonts/fonts.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../assets/styles/stairs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -958,78 +965,138 @@
       </div>
     </div>
     <main>
-      <section class="nvuti">
+      <section class="stairs-page">
         <div class="container">
-          <div class="game-wrapper">
-            <div class="game-settings-block">
-              <div class="game-input">
-                <label>Сумма ставки <span>0.00000 $</span></label>
-                <div>
-                  <input type="text" />
-                  <button class="lined">1/2</button>
-                  <button>x2</button>
+          <div class="mobile-slot-preview">
+            <div class="game-preview-wrapper">
+              <img
+                class="game-preview-img"
+                src="../assets/images/game-img.png"
+                alt=""
+              />
+              <div class="preview-game-info">
+                <div class="preview-game-name">
+                  <h3>Sweet Bonanza 1000</h3>
+                  <p>Pragmatic Play</p>
                 </div>
-              </div>
-              <div class="game-input">
-                <label>Шанс выигрыша</label>
-                <div>
-                  <input type="text" />
-                  <button class="lined">1/2</button>
-                  <button>x2</button>
+                <div class="open-slot-params">
+                  <button>
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 64 64"
+                      class="svg-icon"
+                    >
+                      <title></title>
+                      <path
+                        d="m32.001 16 3.094 5.76c1.742 3.217 4.813 5.525 8.457 6.201l.074.012 6.425 1.146-4.505 4.72a12 12 0 0 0-3.396 8.385q0 .882.124 1.732l-.008-.064.88 6.453L37.6 47.68c-1.635-.808-3.563-1.282-5.599-1.282s-3.964.472-5.675 1.314l.075-.034-5.545 2.666.88-6.453c.074-.5.116-1.08.116-1.668a12 12 0 0 0-3.398-8.39l.004.005-4.505-4.854 6.425-1.146a12.15 12.15 0 0 0 8.501-6.15l.032-.063 3.094-5.626zm0-14.612h-.006c-1.32 0-2.466.736-3.052 1.822l-.01.018-7.599 14.292a3.53 3.53 0 0 1-2.432 1.784l-.022.004-15.998 2.88A3.474 3.474 0 0 0 0 25.603c0 .93.366 1.774.962 2.398L.96 28l11.225 11.705a3.37 3.37 0 0 1 .93 2.982l.004-.02-2.186 15.998a3.466 3.466 0 0 0 3.432 3.946h.008a3.25 3.25 0 0 0 1.644-.382l-.018.008 14.264-6.88a4.19 4.19 0 0 1 3.704.01l-.024-.01 14.053 6.88a3.15 3.15 0 0 0 1.5.374h.021-.002q.052.003.114.002a3.466 3.466 0 0 0 3.43-3.966l.002.018-2.186-15.998a3.37 3.37 0 0 1 .934-2.88l11.225-11.705a3.468 3.468 0 0 0-1.872-5.81l-.022-.003-15.998-2.88a3.53 3.53 0 0 1-2.47-1.846l-.01-.02-7.6-14.292a3.47 3.47 0 0 0-3.061-1.84h-.006z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg fill="currentColor" viewBox="0 0 64 64">
+                      <title></title>
+                      <path
+                        fill-rule="evenodd"
+                        d="M33.013 19.707 64 0v12.64L30.987 33.627 18.133 18.853 0 30.693V17.947L20.107 4.853zM16 64H5.333V35.173L16 28.213zm13.707-21.653-3.04-3.52V64h10.666V37.493l-2.773 1.76zM58.667 64H48V30.72l10.667-6.8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="nvuti-game">
-              <h3>0</h3>
-              <p class="variant-title">Возможный выигрыш</p>
-              <div class="game-variants">
-                <div>
-                  <button>
-                    Меньше
-                    <svg
-                      width="18.012207"
-                      height="11.006104"
-                      viewBox="0 0 18.0122 11.0061"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        id="Vector 92"
-                        d="M1.5 1.5L9 9.5L16.5 1.5"
-                        stroke="#434343"
-                        stroke-opacity="1.000000"
-                        stroke-width="3.000000"
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </button>
-                  <p>0 - 900000</p>
-                </div>
-                <div>
-                  <button>
-                    Больше<svg
-                      width="18.012207"
-                      height="11.006119"
-                      viewBox="0 0 18.0122 11.0061"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        id="Vector 92"
-                        d="M16.5 9.5L9 1.5L1.5 9.5"
-                        stroke="#434343"
-                        stroke-opacity="1.000000"
-                        stroke-width="3.000000"
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </button>
-                  <p>100000 - 999999</p>
-                </div>
+            <div class="choice-game-variant">
+              <button class="game-variant-btn">
+                <span class="game-variant-btn-inner"></span>
+              </button>
+              <span class="choice-game-variant-label"
+                >Играть в полноэкранном режиме</span
+              >
+            </div>
+            <div class="game-start-variants">
+              <button class="start-game-btn">
+                <svg fill="currentColor" viewBox="0 0 96 96" class="svg-icon">
+                  <title></title>
+                  <path
+                    d="M87.985 44.286 12.254.573a4.27 4.27 0 0 0-6.403 3.695v87.464a4.269 4.269 0 0 0 6.422 3.685l-.02.01 75.73-43.713a4.272 4.272 0 0 0 .023-7.418l-.02-.01z"
+                  ></path></svg
+                >Играть
+              </button>
+              <button class="start-demo-btn">
+                <svg fill="currentColor" viewBox="0 0 96 96" class="svg-icon">
+                  <title></title>
+                  <path
+                    d="M87.985 44.286 12.254.573a4.27 4.27 0 0 0-6.403 3.695v87.464a4.269 4.269 0 0 0 6.422 3.685l-.02.01 75.73-43.713a4.272 4.272 0 0 0 .023-7.418l-.02-.01z"
+                  ></path></svg
+                >Демо
+              </button>
+            </div>
+          </div>
+          <div class="slot-game">
+            <div class="slot-screen">
+              <div class="game-start-variants">
+                <button class="start-game-btn">
+                  <svg fill="currentColor" viewBox="0 0 96 96" class="svg-icon">
+                    <title></title>
+                    <path
+                      d="M87.985 44.286 12.254.573a4.27 4.27 0 0 0-6.403 3.695v87.464a4.269 4.269 0 0 0 6.422 3.685l-.02.01 75.73-43.713a4.272 4.272 0 0 0 .023-7.418l-.02-.01z"
+                    ></path></svg
+                  >Играть
+                </button>
+                <button class="start-demo-btn">
+                  <svg fill="currentColor" viewBox="0 0 96 96" class="svg-icon">
+                    <title></title>
+                    <path
+                      d="M87.985 44.286 12.254.573a4.27 4.27 0 0 0-6.403 3.695v87.464a4.269 4.269 0 0 0 6.422 3.685l-.02.01 75.73-43.713a4.272 4.272 0 0 0 .023-7.418l-.02-.01z"
+                    ></path></svg
+                  >Демо
+                </button>
               </div>
-              <div class="game-result">Выпало : 999999</div>
+            </div>
+            <div class="open-slot-footer">
+              <div class="open-slot-params">
+                <button>
+                  <svg fill="currentColor" viewBox="0 0 64 64" class="svg-icon">
+                    <title></title>
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 25h8V8h17V0H0zm56 0h8V0H39v8h17zM25 64H0V39h8v17h17zm14 0h25V39h-8v17H39z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <button>
+                  <svg fill="currentColor" viewBox="0 0 64 64">
+                    <title></title>
+                    <path d="M64 58.5H0v-53h64zm-56-8h48v-37H8z"></path>
+                  </svg>
+                </button>
+                <button>
+                  <svg fill="currentColor" viewBox="0 0 64 64">
+                    <title></title>
+                    <path
+                      fill-rule="evenodd"
+                      d="M33.013 19.707 64 0v12.64L30.987 33.627 18.133 18.853 0 30.693V17.947L20.107 4.853zM16 64H5.333V35.173L16 28.213zm13.707-21.653-3.04-3.52V64h10.666V37.493l-2.773 1.76zM58.667 64H48V30.72l10.667-6.8z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <button>
+                  <svg fill="currentColor" viewBox="0 0 64 64" class="svg-icon">
+                    <title></title>
+                    <path
+                      d="m32.001 16 3.094 5.76c1.742 3.217 4.813 5.525 8.457 6.201l.074.012 6.425 1.146-4.505 4.72a12 12 0 0 0-3.396 8.385q0 .882.124 1.732l-.008-.064.88 6.453L37.6 47.68c-1.635-.808-3.563-1.282-5.599-1.282s-3.964.472-5.675 1.314l.075-.034-5.545 2.666.88-6.453c.074-.5.116-1.08.116-1.668a12 12 0 0 0-3.398-8.39l.004.005-4.505-4.854 6.425-1.146a12.15 12.15 0 0 0 8.501-6.15l.032-.063 3.094-5.626zm0-14.612h-.006c-1.32 0-2.466.736-3.052 1.822l-.01.018-7.599 14.292a3.53 3.53 0 0 1-2.432 1.784l-.022.004-15.998 2.88A3.474 3.474 0 0 0 0 25.603c0 .93.366 1.774.962 2.398L.96 28l11.225 11.705a3.37 3.37 0 0 1 .93 2.982l.004-.02-2.186 15.998a3.466 3.466 0 0 0 3.432 3.946h.008a3.25 3.25 0 0 0 1.644-.382l-.018.008 14.264-6.88a4.19 4.19 0 0 1 3.704.01l-.024-.01 14.053 6.88a3.15 3.15 0 0 0 1.5.374h.021-.002q.052.003.114.002a3.466 3.466 0 0 0 3.43-3.966l.002.018-2.186-15.998a3.37 3.37 0 0 1 .934-2.88l11.225-11.705a3.468 3.468 0 0 0-1.872-5.81l-.022-.003-15.998-2.88a3.53 3.53 0 0 1-2.47-1.846l-.01-.02-7.6-14.292a3.47 3.47 0 0 0-3.061-1.84h-.006z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="choice-game-variant">
+                <span class="variant-label active">Демо</span>
+                <button class="game-variant-btn">
+                  <span class="game-variant-btn-inner"></span>
+                </button>
+                <span class="variant-label">Играть</span>
+              </div>
             </div>
           </div>
           <div class="selectable-menu">
@@ -1346,6 +1413,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      $("#dice-range").ionRangeSlider({
+        min: 0,
+        max: 100,
+        grid: true,
+      });
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>

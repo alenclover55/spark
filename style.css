@@ -1138,7 +1138,122 @@ input[type="number"] {
   line-height: 17px;
   text-wrap: nowrap;
 }
+.slot-screen {
+  width: 100%;
+  height: 675px;
+  background: #121212;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
 
+.game-start-variants {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    width: 14px;
+  }
+}
+.start-game-btn {
+  padding: 13px 16px;
+  background: #b4080b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: #73080a;
+  }
+}
+.open-slot-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e1e;
+  width: 100%;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+}
+.start-demo-btn {
+  padding: 13px 16px;
+  background: #323232;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: #434343;
+  }
+}
+.game-variant-btn {
+  width: 35px;
+  height: 21px;
+  border-radius: 14px;
+  background: #b4080b;
+  position: relative;
+  cursor: pointer;
+  &.active {
+    .game-variant-btn-inner {
+      left: 16px;
+    }
+  }
+  .game-variant-btn-inner {
+    transition: all 0.3s ease-in-out;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    background: #fff;
+  }
+}
+.variant-label {
+  color: #5b5b5b;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    color: #fff;
+  }
+}
+.choice-game-variant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.open-slot-params {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  border-right: 1px solid #323232;
+  button {
+    padding: 13px 16px;
+    background: transparent;
+    color: #323232;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #fff;
+    }
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
 .plinko-game {
   display: flex;
   flex-direction: column;
@@ -1710,7 +1825,7 @@ input[type="number"] {
   left: 0;
   z-index: 10;
   top: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background: #0e0e0e;
   overflow: hidden;
   .menu-group {
@@ -1732,7 +1847,7 @@ input[type="number"] {
     justify-content: start;
     gap: 12px;
     height: 44px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     svg {
       color: #434343;
       transition: all 0.2s ease-in-out;
@@ -1768,7 +1883,7 @@ input[type="number"] {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 20px 0 10px 23px;
+    padding: 10px 0 10px 23px;
   }
 }
 .modal-layout {
@@ -1830,6 +1945,7 @@ input[type="number"] {
 .statistic-vip-progress {
   margin: 30px 0;
 }
+
 .statistic-item {
   background: #2c2c2c;
   padding: 16px;
@@ -3752,6 +3868,104 @@ input[type="number"] {
     background: #ff9900;
   }
 }
+.sidebar {
+  .group-casino {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    a {
+      width: 44px;
+      height: 44px;
+      span {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        background: url("./assets/images/casino-link.jpg");
+        &:hover {
+          background: url(assets/images/casino-active.avif);
+        }
+      }
+      &:nth-child(2) {
+        background: url("./assets/images/better-link.avif");
+        &:hover {
+          background: url(assets/images/better-active.avif);
+        }
+      }
+    }
+  }
+  &.active {
+    .group-casino {
+      flex-direction: row;
+      a {
+        width: 100%;
+        height: 36px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  a {
+    width: 78px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0 !important;
+    border-radius: 5px;
+    &:nth-child(2) {
+      background-image: url(./assets/images/big-casino-variant.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-left: 8px;
+      &:hover {
+        background-image: url(assets/images/big-casino-active.jpg);
+      }
+    }
+    &:nth-child(3) {
+      background-image: url(./assets/images/big-sports-variant.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(assets/images/big-sport-active.jpg);
+      }
+    }
+  }
+}
+.mobile-slot-preview {
+  display: none;
+}
+.sidebar {
+  .group-casino {
+    display: flex;
+    width: 44px;
+  }
+  .sidebar-header {
+    .casino-variant-btn {
+      display: none;
+    }
+  }
+  &.active {
+    .group-casino {
+      display: none;
+      width: 44px;
+    }
+    .sidebar-header {
+      .casino-variant-btn {
+        display: flex;
+      }
+    }
+  }
+}
 
 @media (max-width: 1680px) {
   .container {
@@ -3942,11 +4156,69 @@ input[type="number"] {
       width: 100%;
     }
   }
+  .mobile-slot-preview {
+    display: block;
+    background: #1e1e1e;
+    padding: 16px;
+    margin-top: 40px;
+    .choice-game-variant {
+      margin: 16px 0;
+    }
+  }
+  .choice-game-variant-label {
+    font-size: 14px;
+    color: #434343;
+  }
+  .preview-game-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+    p {
+      color: #434343;
+      font-size: 14px;
+    }
+  }
+  .preview-game-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-slot-preview {
+    .open-slot-params {
+      border-right: 0;
+      button {
+        color: #fff;
+      }
+    }
+    .game-start-variants {
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  .game-preview-wrapper {
+    display: grid;
+    grid-gap: var(--space-4);
+    grid-template-columns: minmax(100px, 40%) auto;
+    gap: 20px;
+  }
   .currency-select {
     margin-top: 15px;
     .currency-select-header {
       width: 100%;
     }
+  }
+  .game-preview-img {
+    max-width: 280px;
+    max-height: 375px;
+    width: 100%;
+    aspect-ratio: 0.746667 / 1;
   }
   .latest-games-table {
     .table-row {
@@ -4095,6 +4367,9 @@ input[type="number"] {
         width: 20px;
       }
     }
+  }
+  .slot-game {
+    display: none;
   }
   .referals-menu {
     display: none;
